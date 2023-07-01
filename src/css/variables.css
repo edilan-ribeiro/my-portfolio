@@ -1,8 +1,8 @@
 :root {
-    --font-big: 5rem;
+    --font-big: 4.5rem;
     --font-medium:3rem;
     --font-normal: 2.5rem;
-    --font-small: 1.6rem;
+    --font-small: 2rem;
 }
 
 :root {
@@ -10,7 +10,7 @@
     --color-secondary:#3E5C76;
     --color-brighter: #748CAB; /* if needed */
     --color-bg: #1D2D44;
-    --color-bg-darker: #0D1321;
+    --color-bg-darker: #0d1321c2;
     --color-bg-lighter: #2E455D;
     --color-white:#FFF;
 }

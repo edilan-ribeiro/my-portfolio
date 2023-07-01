@@ -4,7 +4,6 @@
 
 .header nav ul {
     display: flex;
-
 }
 
 .header nav li a {
@@ -93,7 +92,9 @@
 /* RESPONSIVE */
 
 
-@media(max-width: 900px) {
+
+
+@media(max-width: 930px) {
     .header .menu {
         display: block;
     }
@@ -121,5 +122,6 @@
         text-align: center;                
         padding: 20px;
         display: block;
+        margin: 0;
     }
 }
