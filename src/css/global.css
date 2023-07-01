@@ -6,3 +6,24 @@ html {
   font-weight: 400;
   scroll-behavior: smooth
 }
+
+body {
+    background: var(--color-bg);
+}
+
+.container {
+ 
+    max-width: 1140px;
+    margin:auto;
+}
+
+.flex-wrap {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+
