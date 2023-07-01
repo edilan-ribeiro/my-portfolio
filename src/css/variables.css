@@ -1,20 +1,20 @@
 :root {
-    --font-big: 4.5rem;
-    --font-medium:3rem;
-    --font-normal: 2.5rem;
-    --font-small: 2rem;
+  --font-big: 4.5rem;
+  --font-medium: 3rem;
+  --font-normal: 2.5rem;
+  --font-small: 2rem;
 }
 
 :root {
-    --color-primary:#597491;
-    --color-secondary:#3E5C76;
-    --color-brighter: #748CAB; /* if needed */
-    --color-bg: #1D2D44;
-    --color-bg-darker: #0d1321c2;
-    --color-bg-lighter: #2E455D;
-    --color-white:#FFF;
+  --color-primary: #597491;
+  --color-secondary: #3e5c76;
+  --color-brighter: #748cab;
+  --color-bg: #1d2d44;
+  --color-bg-darker: #0d1321c2;
+  --color-bg-lighter: #2e455d;
+  --color-white: #fff;
 }
 
 :root {
-    --mobile-padding: 30px;
-  }
+  --mobile-padding: 30px;
+}
