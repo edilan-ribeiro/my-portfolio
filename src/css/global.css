@@ -4,25 +4,31 @@ html {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 body {
-    background: var(--color-bg);
+  background: var(--color-bg);
 }
 
 .container {
-     max-width: 1140px;
-    margin:auto;
+  max-width: 1140px;
+  margin: auto;
 }
 
 .flex-wrap {
-    display: flex;
+  display: flex;
 }
 
 .flex-center {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
-
+.title-container {
+    font-size: var(--font-medium);
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
