@@ -15,13 +15,13 @@
 }
 
 .hero .hero-text p,
-h1,
-h2 {
+.hero .hero-text h1,
+.hero .hero-text h2 {
   margin-bottom: 20px;
 }
 
 .hero .hero-text p,
-h2 {
+.hero .hero-text h2 {
   font-weight: 500;
   font-size: var(--font-medium);
 }
@@ -29,22 +29,19 @@ h2 {
 .hero .hero-text .socials {
   font-size: var(--font-medium);
   margin-top: 30px;
-  
 }
 
 .hero .hero-text .socials a {
-    margin-right: 20px;
-    transition: 0.3s ease-in-out;
-    border-radius: 50%;
-    padding: 10px;
+  margin-right: 20px;
+  transition: 0.3s ease-in-out;
+  border-radius: 50%;
+  padding: 10px;
 }
-
 
 .hero .hero-text .socials a:hover {
-    color: var(--color-brighter);
-    box-shadow: 2px 2px 5px;
+  color: var(--color-brighter);
+  box-shadow: 2px 2px 5px;
 }
-
 
 .hero .hero-img {
   flex: 0 0 50%;
@@ -83,16 +80,13 @@ h2 {
   }
 }
 
-
 @media (min-width: 325px) and (max-width: 500px) {
-    .hero .hero-text h1 {
-        font-size: var(--font-medium);
-      }
+  .hero .hero-text h1 {
+    font-size: var(--font-medium);
+  }
 
-      .hero .hero-text p,
-h2 {
-
-  font-size: var(--font-small);
-}
-
+  .hero .hero-text p,
+  .hero .hero-text h2 {
+    font-size: var(--font-small);
+  }
 }
