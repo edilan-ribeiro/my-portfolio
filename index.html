@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./src/css/sections/header.css" />
     <link rel="stylesheet" href="./src/css/sections/hero.css" />
     <link rel="stylesheet" href="./src/css/sections/about.css" />
+    <link rel="stylesheet" href="./src/css/sections/skills.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
@@ -60,27 +61,76 @@
 
     <section class="about-me" id="about-me">
       <div class="container">
-        
-          <div class="title-container">
-            <h2>Sobre mim</h2>
-          </div>
+        <div class="title-container">
+          <h2>Sobre mim</h2>
+        </div>
 
-          <div class="about-info-wrap flex-wrap flex-center">
-            <div class="about-img">
-              <img src="src/images/selfie-about.png" alt="foto sobre edilan ribeiro" />
-            </div>
-            <div class="about-text">
-              <p><strong>Me chamo Edilan Ribeiro e sou desenvolvedor front-end!</strong><br>Gosto bastante da área de tecnologia e estou sempre buscando novos desafios para aprimorar minhas habilidades.</p>
-              <p>Nas horas vagas aproveito para desfrutar de jogos, filmes e series e outras nerdices. 😁 </p>
-            </div>
+        <div class="about-info-wrap flex-wrap flex-center">
+          <div class="about-img">
+            <img src="src/images/selfie-about.png" alt="foto sobre edilan ribeiro" />
           </div>
-        
+          <div class="about-text">
+            <p><strong>Me chamo Edilan Ribeiro e sou desenvolvedor front-end!</strong><br />Gosto bastante da área de tecnologia e estou sempre buscando novos desafios para aprimorar minhas habilidades.</p>
+            <p>Nas horas vagas aproveito para desfrutar de jogos, filmes, series e outras nerdices. 😁</p>
+
+            <a href="#">Meu Curriculo</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="container">
-        <div class="flex-wrap flex-center"></div>
+        <div class="title-container">
+          <h2>Habilidades</h2>
+        </div>
+
+        <div class="skills-container flex-wrap">
+          <div class="info-skills js">
+            <div class="skills-icon">
+              <i class="fa-brands fa-js"></i>
+            </div>
+
+            <h3>JavaScript</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt placeat ipsam suscipit consequuntur ex reiciendis alias accusamus quo consectetur. Consequatur sequi ab id expedita facilis cupiditate quia atque dignissimos possimus!</p>
+          </div>
+
+          <div class="info-skills  html5">
+            <div class="skills-icon">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+
+            <h3>HTML</h3>
+            <p>Possuo um domínio sólido em html, a linguagem base da web, buscando sempre aplicar conceitos como código limpo e elementos semânticos, criando dessa forma estruturas de página bem organizadas.</p>
+          </div>
+
+          <div class="info-skills css">
+            <div class="skills-icon">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+
+            <h3>CSS</h3>
+            <p>Estou familiarizado com as propriedades e valores do CSS, permitindo-me ajustar a posição dos elementos na página com técnicas de flexbox e grid, além de criar layouts responsivos para diferentes dispositivos e tamanhos de tela.</p>
+          </div>
+
+          <div class="info-skills github">
+            <div class="skills-icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+
+            <h3>GitHub</h3>
+            <p>Utilizo o GitHub para criar repositórios dos meus projetos, onde posso armazenar e gerenciar meus códigos de maneira segura. Isso inclui a criação de branches para trabalhar em novas funcionalidades ou correções sem afetar o código principal.</p>
+          </div>
+
+          <div class="info-skills git">
+            <div class="skills-icon">
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+
+            <h3>GIT</h3>
+            <p>Tenho conhecimento dos princípios fundamentais do Git como a criação de repositórios, inicialização de projetos, criação de branches e commits. Utilizo comandos para gerenciar o fluxo de trabalho no código buscando manter commits pequenos e focados.</p>
+          </div>
+        </div>
       </div>
     </section>
 
