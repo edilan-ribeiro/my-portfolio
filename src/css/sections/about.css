@@ -34,3 +34,26 @@
 .about-me .container .about-info-wrap .about-text p {
    margin: 20px 0;
 }
+
+@media (max-width: 900px) {
+    .about-me .container .title-container {
+        font-size: var(--font-normal);
+    }
+
+    .about-me .container .about-info-wrap {
+        font-size: 1.6rem;
+        flex-direction: column;
+        flex: 0;
+    }
+
+    .about-me .container .about-info-wrap .about-img {
+        max-width: 350px;
+        margin: 20px 0;
+    }
+
+    .about-me .container .about-info-wrap .about-text {
+        flex-wrap: wrap;
+        max-width: 100%;
+        text-align: center;
+    }
+}
