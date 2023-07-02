@@ -6,9 +6,9 @@
 }
 
 .footer .footer-wrap p {
-    font-size: var(--font-normal);
-    color: var(--color-white);
-    padding: 10px;
+  font-size: var(--font-normal);
+  color: var(--color-white);
+  padding: 10px;
 }
 
 .footer .footer-wrap .socials {

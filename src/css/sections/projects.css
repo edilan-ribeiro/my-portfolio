@@ -65,17 +65,17 @@
 }
 
 @media (max-width: 900px) {
-    .projects .container .title-container h2 {
+  .projects .container .title-container h2 {
     font-size: var(--font-medium);
-    }
   }
+}
 
-  @media (max-width: 800px) {
-    .projects .container .projects-wrap {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-      padding: var(--mobile-padding);
-    }
+@media (max-width: 800px) {
+  .projects .container .projects-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    padding: var(--mobile-padding);
   }
+}

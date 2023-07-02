@@ -31,11 +31,11 @@ img {
 }
 
 .title-container {
-    font-size: var(--font-medium);
-    text-align: center;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--color-white);
+  font-size: var(--font-medium);
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-white);
 }
 
 .skills-icon {
