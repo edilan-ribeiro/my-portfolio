@@ -32,8 +32,22 @@
 }
 
 .about-me .container .about-info-wrap .about-text p {
-   margin: 20px 0;
+   margin-bottom: 50px;
 }
+
+.about-me .container .about-info-wrap .about-text a {
+    border-radius: 40px;
+    padding: 10px 20px;
+    background-color: var(--color-brighter);
+    transition: 0.3s ease-in-out;
+}
+
+.about-me .container .about-info-wrap .about-text a:hover {
+    transform: scale(1.5);
+    background-color: var(--color-bg-lighter);
+}
+
+
 
 @media (max-width: 900px) {
     .about-me .container .title-container {
