@@ -1,0 +1,32 @@
+.footer .footer-wrap {
+  background-color: var(--color-bg-darker);
+  opacity: 0.8;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer .footer-wrap p {
+    font-size: var(--font-normal);
+    color: var(--color-white);
+    padding: 10px;
+}
+
+.footer .footer-wrap .socials {
+  font-size: var(--font-medium);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer-wrap .socials a {
+  width: 50px;
+  transition: 0.3s ease-in-out;
+  border-radius: 20%;
+  padding: 5px 10px;
+  box-shadow: 0 0 5px;
+  margin: 5px 20px;
+}
+
+.footer .footer-wrap .socials a:hover {
+  color: var(--color-brighter);
+}
