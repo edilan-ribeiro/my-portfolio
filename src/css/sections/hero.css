@@ -32,15 +32,17 @@
 }
 
 .hero .hero-text .socials a {
+  display: inline-block;
   margin-right: 20px;
   transition: 0.3s ease-in-out;
-  border-radius: 50%;
-  padding: 10px;
+  border-radius: 20%;
+  padding: 5px 10px;
+  box-shadow: 0 0 5px;
 }
 
 .hero .hero-text .socials a:hover {
+  transform: scale(1.3);
   color: var(--color-brighter);
-  box-shadow: 2px 2px 5px;
 }
 
 .hero .hero-img {
