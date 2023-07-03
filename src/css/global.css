@@ -41,3 +41,12 @@ img {
 .skills-icon {
   font-size: var(--font-big);
 }
+
+
+.socials {
+  font-size: var(--font-medium);
+}
+
+.socials a:hover {
+  color: var(--color-brighter);
+}
