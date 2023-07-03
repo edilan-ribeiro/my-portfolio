@@ -42,7 +42,6 @@
 
 .hero .hero-text .socials a:hover {
   transform: scale(1.3);
-  color: var(--color-brighter);
 }
 
 .hero .hero-img {

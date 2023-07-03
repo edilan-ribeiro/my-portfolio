@@ -12,9 +12,7 @@
 }
 
 .footer .footer-wrap .socials {
-  font-size: var(--font-medium);
-  padding: 10px;
-  display: flex;
+  padding: 30px;
   justify-content: center;
 }
 
@@ -24,9 +22,7 @@
   border-radius: 20%;
   padding: 5px 10px;
   box-shadow: 0 0 5px;
-  margin: 5px 20px;
+  margin: 20px;
 }
 
-.footer .footer-wrap .socials a:hover {
-  color: var(--color-brighter);
-}
+
