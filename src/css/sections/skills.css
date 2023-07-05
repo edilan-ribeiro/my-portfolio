@@ -49,6 +49,11 @@
   color: #fb5050;
 }
 
+.skills-container .info-skills .fa-elementor,
+.elementor h3 {
+  color: #f2b7e6;
+}
+
 .skills-container .info-skills:hover {
   transform: scale(1.1);
 }
