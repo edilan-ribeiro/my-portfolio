@@ -69,7 +69,11 @@
     padding: 0 var(--mobile-padding);
     margin: 0 auto;
   }
-
+  .hero .hero-text .socials {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   .hero .hero-img {
     margin: 30px 0;
     padding: var(--mobile-padding);
