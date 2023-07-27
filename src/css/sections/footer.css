@@ -17,6 +17,7 @@
 }
 
 .footer .footer-wrap .socials a {
+  display: inline-block;
   width: 50px;
   transition: 0.3s ease-in-out;
   border-radius: 20%;
@@ -25,4 +26,6 @@
   margin: 20px;
 }
 
-
+.footer .footer-wrap .socials li a:hover {
+  transform: scale(1.3); 
+}
