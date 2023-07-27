@@ -23,9 +23,9 @@
   border-radius: 20%;
   padding: 5px 10px;
   box-shadow: 0 0 5px;
-  margin: 20px;
+  margin: 15px;
 }
 
 .footer .footer-wrap .socials li a:hover {
-  transform: scale(1.3); 
+  transform: scale(1.2); 
 }
