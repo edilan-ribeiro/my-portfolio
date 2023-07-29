@@ -1,3 +1,4 @@
+/* ------ BODY BACK TO TOP------- */
 .back-to-top {
   font-size: 2rem;
   width: 40px;
@@ -28,10 +29,35 @@
   transition: 0.4s ease-in-out;
 }
 
+/* ------ BODY RESPONSIVE ------- */
 @media (max-width: 450px) {
   .back-to-top {
     font-size: 1.8rem;
     width: 30px;
     height: 30px;
+  }
+}
+
+
+
+/* ------ HERO DOWN TO ABOUT ME ------- */
+.hero .container .down-hero-chevron {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 70px;
+  animation: blink 0.8s infinite alternate ease-in-out;
+  background-color: transparent;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+@keyframes blink {
+  0% {
+    bottom: 60px;
+    opacity: 0.3;
+    }
+  100% {
+    opacity: 0.6;
   }
 }
