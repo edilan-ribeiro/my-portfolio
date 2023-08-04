@@ -66,6 +66,13 @@
 
 /* ------ FORM ------- */
 
+.footer .footer-wrap .contact-form {
+  background-color: #474fda25;
+  width: 700px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
 .footer .footer-wrap .form .form-inside{
   transition: 0.3s ease-in-out;
 }
