@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/global.css" />
     <link rel="stylesheet" href="./src/css/variables.css" />
-    <link rel="stylesheet" href="./src/css/sections/interactive.css">
+    <link rel="stylesheet" href="./src/css/sections/interactive.css" />
     <link rel="stylesheet" href="./src/css/sections/header.css" />
     <link rel="stylesheet" href="./src/css/sections/hero.css" />
     <link rel="stylesheet" href="./src/css/sections/about.css" />
@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-
     <header class="header">
       <div class="container">
         <div class="flex-wrap flex-center">
@@ -35,6 +34,7 @@
               <li><a href="#about-me">Sobre mim</a></li>
               <li><a href="#skills">Habilidades</a></li>
               <li><a href="#projects">Meus projetos</a></li>
+              <li><a href="#contact">Contato</a></li>
             </ul>
           </nav>
         </div>
@@ -51,13 +51,20 @@
 
             <nav>
               <ul class="socials flex-wrap">
-                <li><a href="https://www.linkedin.com/in/edilan-ribeiro-santos/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://github.com/edilan-ribeiro" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://whatsa.me/5561983769634/?t=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portfolio!" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                <li><a href="mailto:edilanbusiness@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
+                <li>
+                  <a href="https://www.linkedin.com/in/edilan-ribeiro-santos/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href="https://github.com/edilan-ribeiro" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="https://whatsa.me/5561983769634/?t=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portfolio!" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </li>
+                <li>
+                  <a href="mailto:edilanbusiness@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                </li>
               </ul>
             </nav>
-
           </div>
 
           <div class="hero-img">
@@ -65,12 +72,9 @@
           </div>
         </div>
 
-
         <button class="down-hero-chevron" id="down-hero-chevron">
           <i class="fa-solid fa-chevron-down"></i>
         </button>
-
-
       </div>
     </section>
 
@@ -88,7 +92,7 @@
             <p><strong>Me chamo Edilan Ribeiro e sou desenvolvedor front-end!</strong><br />Gosto bastante da área de tecnologia e estou sempre buscando novos desafios para aprimorar minhas habilidades.</p>
             <p>Nas horas vagas aproveito para desfrutar de jogos, filmes, series e outras nerdices. 😁</p>
 
-            <a href="https://drive.google.com/file/d/1gbYkdN1ngkIU2e7wTBhXHSm8hF49yf50/view?usp=sharing">Meu Curriculo</a>
+            <a href="https://drive.google.com/file/d/1WySW4U0yNwUzFQKx7nwsAns1c3iQUJss/view?usp=sharing" target="_blank">Meu Curriculo</a>
           </div>
         </div>
       </div>
@@ -107,7 +111,7 @@
             </div>
 
             <h3>JavaScript</h3>
-            <p> Familiaridade com recursos como arrow functions, destructuring e template literals. Utilização de funções, estruturas de repetição, eventos, manipulação do DOM e integração de APIs para desenvolver projetos inovadores que aprimorem a experiência do usuário.</p>
+            <p>Familiaridade com recursos como arrow functions, destructuring e template literals. Utilização de funções, estruturas de repetição, eventos, manipulação do DOM e integração de APIs para desenvolver projetos inovadores que aprimorem a experiência do usuário.</p>
           </div>
 
           <div class="info-skills  html5">
@@ -218,30 +222,53 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="footer-wrap">
 
-        <p>Envie uma mensagem</p>
+        <form id="contact-form" class="form flex-wrap flex-center" method="POST" action="https://script.google.com/macros/s/AKfycbxBokc2jLtNh722EBe0PNC87jLJ_VKQvMb9FOw_HhAZhuFeYcrmkOcofxIUp5Ui15FTWw/exec">
 
-        <nav>
-          <ul class="socials flex-wrap">
-            <li><a href="https://www.linkedin.com/in/edilan-ribeiro-santos/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="https://github.com/edilan-ribeiro" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://whatsa.me/5561983769634/?t=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portfolio!" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-            <li><a href="mailto:edilanbusiness@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
-          </ul>
-        </nav>
-  
+          <div class="form-inside form flex-wrap flex-center" id="hide-form">
+
+              <p class="footer-message">Mande uma mensagem ✍️</p>
+
+              <div class="form-row flex-wrap">
+
+
+                <div class="form-input-group flex-wrap">
+                  <label class="form-labels" for="name">Digite seu nome</label>
+                  <input name="name" id="name" type="text" placeholder="Nome" minlength="5" required/>
+                </div>
+
+                <div class="form-input-group flex-wrap">
+                  <label class="form-labels" for="email">Digite seu email</label>
+                  <input name="email" id="email" type="email" placeholder="Email" required/>
+                </div>
+
+              </div>
+              
+              <div class="flex-wrap">
+
+                <div class="form-input-group flex-wrap">
+                  <label class="form-labels" for="message">Digite sua mensagem</label>
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Escreva sua mensagem aqui, pode ser também uma dúvida ou sugestão caso tenha alguma :)" minlength="11" required></textarea>
+                </div>
+              </div>
+
+
+              <button type="submit" class="send-button">Enviar mensagem</button>
+        </div>
+
+        <p class="success-position hide" id="form-sent">Mensagem enviada com sucesso!</p>
+
+        </form>
+        
       </div>
     </footer>
 
-
-    <button class="back-to-top hide-btn" id="back-to-top"> 
+    <button class="back-to-top hide-btn" id="back-to-top">
       <i class="fa-solid fa-chevron-up"></i>
     </button>
 
-
-    <script src="./src/js/backToTop.js"></script>
-    <script src="./src/js/bellowHero.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
   </body>
 </html>
