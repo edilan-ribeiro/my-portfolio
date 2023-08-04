@@ -79,3 +79,9 @@
     padding: var(--mobile-padding);
   }
 }
+
+@media (max-width: 600px) {
+  .projects .container .projects-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 400px));
+  }
+}
