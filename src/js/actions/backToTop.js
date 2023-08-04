@@ -1,4 +1,4 @@
-const buttonBackToTop = document.getElementById('back-to-top')
+function backToTop() {const buttonBackToTop = document.getElementById('back-to-top')
 
  window.onscroll = function(){buttonAppear()}
  
@@ -18,3 +18,7 @@ buttonBackToTop.addEventListener('click', () => {
     })
   
 })
+
+}
+
+export {backToTop}
