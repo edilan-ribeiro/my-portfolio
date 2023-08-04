@@ -29,7 +29,7 @@
   transition: 0.4s ease-in-out;
 }
 
-/* ------ BODY RESPONSIVE ------- */
+/* ------ BACK TO TOP RESPONSIVE ------- */
 @media (max-width: 450px) {
   .back-to-top {
     font-size: 1.8rem;
@@ -60,4 +60,18 @@
   100% {
     opacity: 0.6;
   }
+}
+
+
+
+/* ------ FORM ------- */
+
+.footer .footer-wrap .form .form-inside{
+  transition: 0.3s ease-in-out;
+}
+
+.hide {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
 }
