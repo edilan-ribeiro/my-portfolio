@@ -88,6 +88,14 @@
 
 /* RESPONSIVE */
 
+@media (max-width: 1160px) {
+  .header nav li a {
+    margin: 0 20px;
+  }
+}
+
+/* MENU RESPONSIVE */
+
 @media (max-width: 930px) {
   .header .menu {
     display: block;
