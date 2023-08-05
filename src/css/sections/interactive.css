@@ -43,20 +43,22 @@
   position: absolute;
   font-size: 2rem;
   bottom: 70px;
-  animation: blink 0.8s infinite alternate ease-in-out;
+  animation: blink 1s infinite ease-in-out;
   background-color: transparent;
   border: none;
   color: var(--color-white);
   cursor: pointer;
+  opacity: 0.4;
 }
 
 @keyframes blink {
   0% {
-    bottom: 60px;
-    opacity: 0.3;
+    bottom: 65px;
+    opacity: 0.8;
   }
   100% {
-    opacity: 0.6;
+    bottom: 50px;
+    opacity: 0;
   }
 }
 
