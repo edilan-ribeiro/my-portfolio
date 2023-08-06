@@ -21,34 +21,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="flex-wrap flex-center">
-          <nav>
-            <input id="menu-hamburguer" type="checkbox" />
-            <label for="menu-hamburguer">
-              <div class="menu">
-                <span class="hamburguer"></span>
-              </div>
-            </label>
-
-            <ul id="menu-links">
-              <li><a href="#about-me">Sobre mim</a></li>
-              <li><a href="#skills">Habilidades</a></li>
-              <li><a href="#projects">Meus projetos</a></li>
-              <li><a href="#contact">Contato</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-
     <section class="hero flex-wrap">
+
+      <header class="header menu-fixed">
+        <div class="container">
+          <div class="flex-wrap flex-center">
+            <nav>
+              <input id="menu-hamburguer" type="checkbox" />
+              <label for="menu-hamburguer">
+                <div class="menu">
+                  <span class="hamburguer"></span>
+                </div>
+              </label>
+  
+              <ul id="menu-links">
+                <!-- <li><a href="#about-me">Sobre mim</a></li> -->
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Meus projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
       <div class="container flex-wrap flex-center">
         <div class="flex-wrap flex-center">
           <div class="hero-text">
-            <p>Olá, 👋</p>
-            <h1>Sou o Edilan Ribeiro</h1>
+            
+            <h1>Edilan Ribeiro</h1>
             <h2>Desenvolvedor Front-End</h2>
 
             <nav>
@@ -69,15 +70,12 @@
             </nav>
           </div>
 
-          <div class="hero-img">
-            <img src="./src/images/selfie.png" alt="foto de perfil de edilan ribeiro" />
-          </div>
-        </div>
-
         <button class="down-hero-chevron" id="down-hero-chevron">
           <i class="fa-solid fa-chevron-down"></i>
         </button>
+
       </div>
+      
     </section>
 
     <section class="about-me" id="about-me">
