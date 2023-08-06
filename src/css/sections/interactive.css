@@ -38,7 +38,7 @@
   }
 }
 
-/* ------ HERO DOWN TO ABOUT ME ------- */
+/* ------ HERO LINK TO ABOUT ME ------- */
 .hero .container .down-hero-chevron {
   position: absolute;
   font-size: 2rem;
@@ -47,8 +47,6 @@
   background-color: transparent;
   border: none;
   color: var(--color-white);
-  cursor: pointer;
-  opacity: 0.4;
 }
 
 @keyframes blink {
