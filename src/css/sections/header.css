@@ -2,6 +2,15 @@
   padding: 30px 15px;
 }
 
+.menu-fixed {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
 .header nav ul {
   display: flex;
 }
