@@ -1,35 +1,57 @@
 .hero {
   color: var(--color-white);
-  min-height: 85vh;
+  min-height: 100vh;
   padding: 50px 0;
   position: relative;
+  background: #4b4a4a67 url(../../images/new-world-5229650.jpg) top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.hero .hero-text {
-  letter-spacing: 2px;
-  max-width: 55%;
-  margin-right: 100px;
+.hero::before {
+  content: "";
+  background-attachment: fixed, fixed;
+  background-image: url(../../images/overlay-pattern.png), url(../../images/overlay.svg);
+  background-position: top left, center center;
+  background-repeat: repeat, no-repeat;
+  background-size: cover, cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  position: absolute;
 }
 
 .hero .hero-text h1 {
   font-size: var(--font-big);
+  letter-spacing: -2px;
+  font-weight: 800;
 }
 
 .hero .hero-text p,
 .hero .hero-text h1,
 .hero .hero-text h2 {
+  text-align: center;
   margin-bottom: 20px;
+  line-height: 70px;
+  z-index: 3;
+  position: relative;
 }
 
 .hero .hero-text p,
 .hero .hero-text h2 {
-  font-weight: 500;
+  font-weight: 300;
   font-size: var(--font-medium);
+  letter-spacing: 2px;
 }
 
 .hero .hero-text .socials {
   font-size: var(--font-medium);
   margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .hero .hero-text .socials a {
@@ -44,20 +66,6 @@
 .hero .hero-text .socials a:hover {
   transform: scale(1.2);
 }
-
-.hero .hero-img {
-  flex: 0 0 50%;
-  max-width: 400px;
-  margin: auto;
-}
-
-.hero .hero-img img {
-  border-radius: 50%;
-  border: solid 5px var(--color-brighter);
-  box-shadow: 3px 3px 10px;
-  padding: 5px;
-}
-
 
 /* ------ RESPONSIVE ------- */
 @media (max-width: 1280px) {
@@ -76,15 +84,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
-  .hero .hero-img {
-    margin: 30px 0;
-    padding: var(--mobile-padding);
-  }
-
-  .hero .hero-img img {
-    max-width: 100%;
-    text-align: center;
   }
 }
 
