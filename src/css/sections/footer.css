@@ -3,173 +3,29 @@
   opacity: 0.8;
   text-align: center;
   margin-top: 30px;
-  padding: 15px;
 }
 
-.footer .footer-wrap .form {
-  padding: 20px; /* applied 2x */
-  text-align: left;
-  flex-direction: column;
-  position: relative;
-}
-
-.footer .footer-wrap .form .footer-message {
+.footer .footer-wrap p {
   font-size: var(--font-normal);
   color: var(--color-white);
   padding: 10px;
-  margin-bottom: 40px;
-  font-weight: 700;
 }
 
-.footer .footer-wrap .form .form-row {
-  gap: 40px;
-  margin-bottom: 30px;
+.footer .footer-wrap .socials {
+  padding: 30px;
+  justify-content: center;
 }
 
-.footer .footer-wrap .form .form-input-group {
-  color: var(--color-white);
-  font-size: var(--font-small);
-  flex-direction: column;
-}
-
-.footer .footer-wrap .form .form-input-group .form-labels {
-  font-size: var(--font-small);
-  color: var(--color-white);
-  padding: 10px;
-}
-
-.footer .footer-wrap .form .form-input-group input,
-.footer .footer-wrap .form .form-input-group textarea {
-  font-size: var(--font-Xsmall);
-  padding: 10px 20px;
-  margin: 15px 0;
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  color: var(--color-white);
-}
-
-.footer .footer-wrap .form .form-input-group textarea {
-  font-family: "Open Sans", sans-serif;
-  resize: none;
-  padding: 10px 20px;
-  height: 8rem;
-  width: 510px;
-}
-
-.footer .footer-wrap .form .form-input-group input:focus,
-.footer .footer-wrap .form .form-input-group textarea:focus,
-.footer .footer-wrap .form .form-input-group input::placeholder,
-.footer .footer-wrap .form .form-input-group textarea::placeholder {
-  color: var(--color-white);
-  outline: none;
-}
-
-.footer .footer-wrap .form .form-input-group input::placeholder,
-.footer .footer-wrap .form .form-input-group textarea::placeholder {
-  opacity: 0.7;
-  font-weight: 300;
-}
-
-.footer .footer-wrap .send-button {
-  background-color: var(--color-brighter);
-  font-size: var(--font-small);
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: 0.5s ease-in-out;
-  color: var(--color-white);
-  border: none;
-  cursor: pointer;
-  margin-top: 15px;
-  text-transform: uppercase;
-}
-
-.footer .footer-wrap .send-button:hover,
-.footer .footer-wrap .send-button:focus {
-  background-color: var(--color-bg-lighter);
-  transition: 0.5s ease-in-out;
-}
-
-.footer .footer-wrap .success-position {
-  position: absolute;
-  font-size: var(--font-normal);
-  color: var(--color-white);
-  padding: 10px;
-  font-weight: 700;
+.footer .footer-wrap .socials a {
+  display: inline-block;
+  width: 50px;
   transition: 0.3s ease-in-out;
+  border-radius: 20%;
+  padding: 5px 10px;
+  box-shadow: 0 0 5px;
+  margin: 15px;
 }
 
-/* ------ RESPONSIVE ------- */
-
-@media (max-width: 605px) {
-  .footer .footer-wrap .form .form-row {
-    gap: 15px;
-  }
-
-  .footer .footer-wrap .form .form-input-group .form-labels {
-    font-size: var(--font-Xsmall);
-    padding: 5px;
-  }
-
-  .footer .footer-wrap .form .form-input-group input {
-    width: 190px;
-  }
-
-  .footer .footer-wrap .form .form-input-group input,
-  .footer .footer-wrap .form .form-input-group textarea {
-    font-size: var(--font-Xsmall);
-    padding: 10px;
-  }
-
-  .footer .footer-wrap .form .form-input-group textarea {
-    width: 400px;
-  }
-
-  .footer .footer-wrap .success-position {
-    font-size: var(--font-small);
-  }
-}
-
-/* @media (max-width: 480px) {
-  .footer .footer-wrap .form .form-inside {
-    max-width: 435px;
-  }
-
-  .footer .footer-wrap .success-position {
-    font-size: var(--font-Xsmall);
-  }
-} */
-
-@media (max-width: 480px) {
-  .footer .footer-wrap .form .form-inside {
-    max-width: 370px;
-  }
-
-  .footer .footer-wrap .form .form-inside .footer-message {
-    font-size: var(--font-small);
-    font-weight: 700;
-    margin-bottom: 30px;
-  }
-
-  .footer .footer-wrap .form .form-input-group input {
-    width: 140px;
-  }
-
-  .footer .footer-wrap .form .form-input-group textarea {
-    width: 300px;
-    height: 9rem;
-  }
-
-  .footer .footer-wrap .send-button {
-    font-size: var(--font-Xsmall);
-    border-radius: 30px;
-    padding: 15px 20px;
-  }
-}
-
-@media (max-width: 390px) {
-  .footer .footer-wrap .form .form-inside {
-    max-width: 370px;
-    padding: 10px;
-  }
+.footer .footer-wrap .socials li a:hover {
+  transform: scale(1.2); 
 }

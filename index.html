@@ -35,10 +35,9 @@
               </label>
   
               <ul id="menu-links">
-                <!-- <li><a href="#about-me">Sobre mim</a></li> -->
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#projects">Meus projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#skills" class="hover-animation">Habilidades</a></li>
+                <li><a href="#projects" class="hover-animation">Meus projetos</a></li>
+                <li><a href="#footer" class="hover-animation">Contato</a></li>
               </ul>
             </nav>
           </div>
@@ -82,17 +81,35 @@
       <div class="container">
         <div class="title-container">
           <h2>Sobre mim</h2>
+          <div class="line-style"></div>
         </div>
 
         <div class="about-info-wrap flex-wrap flex-center">
           <div class="about-img">
-            <img src="src/images/selfie-about.png" alt="foto sobre edilan ribeiro" />
+            <img src="src/images/selfie-about.png" alt="foto de edilan ribeiro" />
           </div>
           <div class="about-text">
-            <p><strong>Me chamo Edilan Ribeiro e sou desenvolvedor front-end!</strong><br />Gosto bastante da área de tecnologia e estou sempre buscando novos desafios para aprimorar minhas habilidades.</p>
-            <p>Nas horas vagas aproveito para desfrutar de jogos, filmes, series e outras nerdices. 😁</p>
+            <p> 
+              <strong>
+                Olá,<br>
+                Meu nome é Edilan, sou desenvolvedor front-end!
+              </strong>
+            </p>
 
-            <a href="https://drive.google.com/file/d/1WySW4U0yNwUzFQKx7nwsAns1c3iQUJss/view?usp=sharing" target="_blank">Meu Curriculo</a>
+            <p>
+              Apaixonado por tecnologia desde cedo me formei em Redes de Computadores mas fugi da área, mil anos depois decidi percorrer a carreira de desenvolvedor e aqui estamos 🤗 <br><br>
+              Como desenvolvedor estou sempre buscando conhecimento através novos desafios para aprimorar minhas habilidades afim de entregar as melhores soluções possíveis.👨‍💻
+            </p>
+
+            <p>
+              Como todo bom nerd, nas horas vagas aproveito para jogar, ver filmes, series, animes🤓
+            </p>
+
+            <p>
+              Quando chega a hora de tocar a grama gosto de andar de moto, patinar no gelo, fazer bolo e também servir de travesseiro para o gato 🐈
+            </p>
+
+            <a class="button-sliding" href="https://drive.google.com/file/d/1WySW4U0yNwUzFQKx7nwsAns1c3iQUJss/view?usp=sharing" target="_blank">Meu Currículo</a>
           </div>
         </div>
       </div>
@@ -102,6 +119,7 @@
       <div class="container">
         <div class="title-container">
           <h2>Habilidades</h2>
+          <div class="line-style"></div>
         </div>
 
         <div class="skills-container flex-wrap">
@@ -166,6 +184,7 @@
       <div class="container">
         <div class="title-container">
           <h2>Meus Projetos</h2>
+          <div class="line-style"></div>
         </div>
 
         <div class="projects-wrap">
@@ -218,50 +237,26 @@
           </div>
         </div>
 
-        <p class="projects-btn title-container"><a href="https://github.com/edilan-ribeiro?tab=repositories">Mais projetos</a></p>
+        <div class="flex-wrap flex-center">
+          <a class="button-sliding projects-btn" href="https://github.com/edilan-ribeiro?tab=repositories">Mais projetos</a>
+        </div>
       </div>
     </section>
 
-    <footer class="footer" id="contact">
+    <footer class="footer" id="footer">
       <div class="footer-wrap">
 
-        <form id="contact-form" class="form contact-form flex-wrap flex-center" method="POST" action="https://script.google.com/macros/s/AKfycbxBokc2jLtNh722EBe0PNC87jLJ_VKQvMb9FOw_HhAZhuFeYcrmkOcofxIUp5Ui15FTWw/exec">
+        <p>Entre em contato</p>
 
-          <div class="form-inside form flex-wrap flex-center" id="hide-form">
-
-              <p class="footer-message">Mande uma mensagem ✍️</p>
-
-              <div class="form-row flex-wrap">
-
-
-                <div class="form-input-group flex-wrap">
-                  <label class="form-labels" for="name">Digite seu nome</label>
-                  <input name="name" id="name" type="text" placeholder="Nome" minlength="5" required/>
-                </div>
-
-                <div class="form-input-group flex-wrap">
-                  <label class="form-labels" for="email">Digite seu email</label>
-                  <input name="email" id="email" type="email" placeholder="Email" required/>
-                </div>
-
-              </div>
-              
-              <div class="flex-wrap">
-
-                <div class="form-input-group flex-wrap">
-                  <label class="form-labels" for="message">Digite sua mensagem</label>
-                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Escreva sua mensagem aqui, pode ser também uma dúvida ou sugestão caso tenha alguma :)" minlength="11" required></textarea>
-                </div>
-              </div>
-
-
-              <button type="submit" class="send-button">Enviar mensagem</button>
-        </div>
-
-        <p class="success-position hide" id="form-sent">Mensagem enviada com sucesso!</p>
-
-        </form>
-        
+        <nav>
+          <ul class="socials flex-wrap">
+            <li><a href="https://www.linkedin.com/in/edilan-ribeiro-santos/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/edilan-ribeiro" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://whatsa.me/5561983769634/?t=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portfolio!" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="mailto:edilanbusiness@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
+          </ul>
+        </nav>
+  
       </div>
     </footer>
 
