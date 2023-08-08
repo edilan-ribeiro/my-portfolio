@@ -10,6 +10,7 @@
 
 .hero::before {
   content: "";
+  background-color: rgba(70, 148, 211, 0.162);
   background-attachment: fixed, fixed;
   background-image: url(../../images/overlay-pattern.png), url(../../images/overlay.svg);
   background-position: top left, center center;
@@ -35,7 +36,7 @@
   text-align: center;
   margin-bottom: 20px;
   line-height: 70px;
-  z-index: 3;
+  z-index: 2;
   position: relative;
 }
 
@@ -69,10 +70,6 @@
 
 /* ------ RESPONSIVE ------- */
 @media (max-width: 1280px) {
-  .hero .flex-wrap {
-    flex-direction: column;
-  }
-
   .hero .hero-text {
     flex: 0 0 100%;
     max-width: 100%;
@@ -88,12 +85,10 @@
 }
 
 @media (min-width: 325px) and (max-width: 500px) {
-  .hero .hero-text h1 {
-    font-size: var(--font-medium);
-  }
-
   .hero .hero-text p,
   .hero .hero-text h2 {
     font-size: var(--font-small);
+    letter-spacing: 1px;
+    line-height: 30px;
   }
 }
