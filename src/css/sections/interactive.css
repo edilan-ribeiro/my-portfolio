@@ -60,6 +60,50 @@
   }
 }
 
+/* ------ Button that slides :) ------- */
+
+.button-sliding {
+  font-size: var(--font-small);
+  min-width: 130px;
+  height: 40px;
+  color: var(--color-white);
+  padding: 5px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: var(--color-brighter);
+  overflow: hidden;
+  box-shadow: 0 0 5px #000;
+  color: var(--color-white);
+}
+
+.button-sliding:hover {
+  color: #2d2d2d;
+}
+
+.button-sliding:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: 0.4s ease-in-out;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color-primary);
+}
+
+.button-sliding:hover:after {
+  width: 100%;
+}
+
+
+
 /* ------ FORM ------- */
 
 .footer .footer-wrap .contact-form {
