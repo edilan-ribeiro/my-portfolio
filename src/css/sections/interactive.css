@@ -60,7 +60,7 @@
   }
 }
 
-/* ------ Button that slides :) ------- */
+/* ------ Button that slides ------- */
 
 .button-sliding {
   font-size: var(--font-small);
@@ -100,45 +100,4 @@
 
 .button-sliding:hover:after {
   width: 100%;
-}
-
-
-
-/* ------ FORM ------- */
-
-.footer .footer-wrap .contact-form {
-  background-color: #474fda25;
-  max-width: 550px;
-  margin: 0 auto;
-  border-radius: 20px;
-}
-
-.footer .footer-wrap .form .form-inside {
-  transition: 0.3s ease-in-out;
-}
-
-.hide {
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-  pointer-events: none;
-}
-
-/* ------ RESPONSIVE FORM ------- */
-
-@media (max-width: 605px) {
-  .footer .footer-wrap .contact-form {
-    width: 440px;
-  }
-}
-
-@media (max-width: 485px) {
-  .footer .footer-wrap .contact-form {
-    width: 340px;
-  }
-}
-
-@media (max-width: 390px) {
-  .footer .footer-wrap .contact-form {
-    width: 320px;
-  }
 }
