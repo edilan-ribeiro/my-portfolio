@@ -11,15 +11,13 @@
   padding: 30px 0;
 }
 
-.about-me .container .about-info-wrap .about-img {
-  border: 1px solid transparent;
-  max-width: 400px;
+.about-me .container .about-info-wrap .about-img,
+.about-me .container .about-info-wrap .about-img img  {
+  max-width: 550px;
   margin-right: 30px;
+  border-radius: 25px;
 }
 
-.about-me .container .about-info-wrap .about-img img {
-  border-radius: 30%;
-}
 
 .about-me .container .about-info-wrap .about-text {
   flex-wrap: wrap;
@@ -33,18 +31,6 @@
 
 .about-me .container .about-info-wrap .about-text p {
   margin-bottom: 50px;
-}
-
-.about-me .container .about-info-wrap .about-text a {
-  border-radius: 40px;
-  padding: 10px 20px;
-  background-color: var(--color-brighter);
-  transition: 0.3s ease-in-out;
-}
-
-.about-me .container .about-info-wrap .about-text a:hover {
-  transform: scale(1.5);
-  background-color: var(--color-bg-lighter);
 }
 
 @media (max-width: 900px) {
