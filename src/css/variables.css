@@ -7,11 +7,10 @@
 }
 
 :root {
-  --color-primary: #597491;
-  --color-secondary: #3e5c76;
-  --color-brighter: #748cab;
+  --color-primary: #65c4e7;
+  --color-brighter: #599bb3;
   --color-bg: #232323;
-  --color-bg-darker: #0d1321e6;
+  --color-bg-darker: #1717177f;
   --color-bg-lighter: #2e455d;
   --color-white: #fff;
 }
