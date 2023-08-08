@@ -113,8 +113,8 @@
   .header nav li a {
     color: var(--color-white);
     text-align: center;
-    padding: 20px;
     display: block;
     margin: 0;
+    font-size: var(--font-small);
   }
 }
