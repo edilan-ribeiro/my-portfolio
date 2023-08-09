@@ -3,7 +3,8 @@
   min-height: 100vh;
   padding: 50px 0;
   position: relative;
-  background-size: cover;
+  background-size: auto;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -83,7 +84,11 @@
   }
 }
 
-@media (min-width: 325px) and (max-width: 500px) {
+@media(max-width: 500px) {
+  .hero {
+    background-size: cover;
+  }
+
   .hero .hero-text p,
   .hero .hero-text h2 {
     font-size: var(--font-small);
