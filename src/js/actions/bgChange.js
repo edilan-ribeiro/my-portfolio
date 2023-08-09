@@ -1,7 +1,7 @@
 function backgroundSlideshow() {
 
     let images = [
-        './src/images/selfie-about.png',
+        '../images/selfie-about.png',
         // './src/images/backgrounds/space1.jpg',
         // './src/images/backgrounds/fractal1.jpg',
         // './src/images/backgrounds/sky1.jpg',
