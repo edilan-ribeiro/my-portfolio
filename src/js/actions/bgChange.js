@@ -1,12 +1,11 @@
 function backgroundSlideshow() {
 
     let images = [
-        '../images/selfie-about.png',
-        // './src/images/backgrounds/space1.jpg',
-        // './src/images/backgrounds/fractal1.jpg',
-        // './src/images/backgrounds/sky1.jpg',
-        // './src/images/backgrounds/space2.jpg',     
-                   
+        `${window.location.origin}/my-portfolio/src/images/backgrounds/clouds1.jpg`,
+        `${window.location.origin}/my-portfolio/src/images/backgrounds/space1.jpg`,
+        `${window.location.origin}/my-portfolio/src/images/backgrounds/fractal1.jpg`,
+        `${window.location.origin}/my-portfolio/src/images/backgrounds/sky1.jpg`,
+        `${window.location.origin}/my-portfolio/src/images/backgrounds/space2.jpg`,                   
     ]
 
     let imgChangeTime = 15000
