@@ -61,5 +61,6 @@ img {
 }
 
 .socials a:hover {
-  color: var(--color-brighter);
+  background-color: rgb(29, 28, 21);
+  transition: 0.3s ease-in-out;
 }
