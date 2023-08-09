@@ -24,7 +24,7 @@
       <a href="#sobre-o-projeto">Sobre o projeto</a>
       <ul>
         <li><a href="#feito-com">Feito com</a></li>
-        <li><a href="#o-que-aprendi">O que aprendi</a></li>
+        <li><a href="#Destaques">Destaques</a></li>
         <li><a href="#planejamento-futuro">Planejamento futuro</a></li>
         </ul>
     </li>
@@ -35,7 +35,7 @@
 <br><br>
 ## Sobre o projeto
 
-<img src="./src/images/design/desktop.gif" alt="Result portfolio page on large desktop" width="426" height="309">
+<img src="./src/images/design/desktop.gif" alt="Result portfolio page on large desktop" width="603" height="309">
 
 <br>
 
@@ -62,21 +62,21 @@ Acredito que um portfólio forte e bem organizado é uma forma destaque, pois pe
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### O que aprendi
+### Destaques
 
-Diversas coisas foram aprendidas ao longo do andamento desse projeto que esta em constante atualização, dentre os destaques posso citar:
+Diversas coisas foram adicionadas ao longo do andamento desse projeto que esta em constante atualização:
 
-- Validação de campos de formulário
-- Adequação a layout responsivo
-- Animação de itens
-- Apresentação de projetos
+- Layout 100% responsivo
+- Sessão inicial com slides e transparências
+- Navegação completa
+- Botões 100% animados
+- Link para o currículo
+
 
 <br>
 
 ## Planejamento futuro
 
-- Troca de background
-- Mais animações
 - Inserção de projetos novos/atualizados
 
 
