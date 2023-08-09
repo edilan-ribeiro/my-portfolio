@@ -68,6 +68,7 @@
 
   .header nav input:checked ~ ul {
     animation: open-menu 0.3s ease-in-out both;
+    display: block;
   }
 
   @keyframes open-menu {
