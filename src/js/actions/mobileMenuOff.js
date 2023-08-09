@@ -20,31 +20,15 @@ function mobileMenuOnOff() {
 
     window.addEventListener("resize", () => {
         if (window.innerWidth > 930) {
-        mobileMenu.style.display = "flex"
-        
-        } else if (window.innerWidth <= 930  && mobileCheckbox.checked) {
-            mobileMenu.style.display = "block"
-
-        } else if (window.innerWidth <= 930  && !mobileCheckbox.checked) {
-            mobileMenu.style.display = "none"
-        }
-            else{
-                
-                mobileCheckbox.addEventListener("click", () => {
-
-                    if (mobileCheckbox.checked) {
-                        mobileMenu.style.display = "block"
-                    } else {
-                    setTimeout(() => {
-                        mobileMenu.style.display = "none"
-                        }, 440)
-                    }
-                })
-            }
+            mobileMenu.style.display = "flex";
+          } else if (window.innerWidth <= 930 && mobileCheckbox.checked) {
+            mobileMenu.style.display = "block";
+          } else if (window.innerWidth <= 930 && !mobileCheckbox.checked) {
+            mobileMenu.style.display = "none";
+          }
 
     })
 
-    
 }
 
 export { mobileMenuOnOff }
