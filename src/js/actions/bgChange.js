@@ -1,11 +1,11 @@
 function backgroundSlideshow() {
 
     let images = [
-        '../images/backgrounds/clouds1.jpg',
-        '../images/backgrounds/space1.jpg',
-        '../images/backgrounds/fractal1.jpg',
-        '../images/backgrounds/sky1.jpg',
-        '../images/backgrounds/space2.jpg',                    
+        './../images/backgrounds/clouds1.jpg',
+        './../images/backgrounds/space1.jpg',
+        './../images/backgrounds/fractal1.jpg',
+        './../images/backgrounds/sky1.jpg',
+        './../images/backgrounds/space2.jpg',                    
     ]
 
     let imgChangeTime = 15000
