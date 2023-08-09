@@ -1,11 +1,11 @@
 function backgroundSlideshow() {
 
     let images = [
-        './../src/images/backgrounds/clouds1.jpg',
-        './../src/images/backgrounds/space1.jpg',
-        './../src/images/backgrounds/fractal1.jpg',
-        './../src/images/backgrounds/sky1.jpg',
-        './../src/images/backgrounds/space2.jpg',                    
+        'https://github.com/edilan-ribeiro/my-portfolio/blob/main/src/images/backgrounds/clouds1.jpg',
+        'https://github.com/edilan-ribeiro/my-portfolio/blob/main/src/images/backgrounds/fractal1.jpg',
+        'https://github.com/edilan-ribeiro/my-portfolio/blob/main/src/images/backgrounds/sky1.jpg',
+        'https://github.com/edilan-ribeiro/my-portfolio/blob/main/src/images/backgrounds/space1.jpg',
+        'https://github.com/edilan-ribeiro/my-portfolio/blob/main/src/images/backgrounds/space2.jpg',                    
     ]
 
     let imgChangeTime = 15000
