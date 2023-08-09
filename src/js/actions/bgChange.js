@@ -9,7 +9,7 @@ function backgroundSlideshow() {
                     
     ]
 
-    let imgChangeTime = 3000
+    let imgChangeTime = 15000
     let heroSection = document.getElementById('hero')
 
     let currentIndex = 0;
