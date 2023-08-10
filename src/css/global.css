@@ -9,6 +9,10 @@ html {
 
 body {
   background: var(--color-bg);
+  background-image: url(../images/backgrounds/main.svg);
+  background-repeat: space;
+  background-position: center;
+
 }
 
 img {
