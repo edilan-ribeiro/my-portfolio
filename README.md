@@ -35,7 +35,7 @@
 <br><br>
 ## Sobre o projeto
 
-<img src="./src/images/design/desktop.gif" alt="Result portfolio page on large desktop" width="603" height="309">
+<img src="./src/images/design/desktop.gif" alt="Result portfolio page on large desktop" width="603" height="250">
 
 <br>
 
