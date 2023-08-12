@@ -88,7 +88,7 @@
     position: absolute;
     top: 30px;
     right: 20px;
-    z-index: 4;
+    z-index: 5;
   }
 
   .header nav ul {
