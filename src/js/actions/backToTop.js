@@ -11,13 +11,17 @@ function backToTop() {const buttonBackToTop = document.getElementById('back-to-t
  }
 
 
-buttonBackToTop.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        scrollBehavior: 'smooth'
-    })
+ buttonBackToTop.addEventListener('click', () => {
+    scrollToTop();
+  });
   
-})
+  function scrollToTop() {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, c - c / 15);
+    }
+  }
 
 }
 
