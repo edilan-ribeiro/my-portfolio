@@ -64,13 +64,14 @@ Acredito que um portfólio forte e bem organizado é uma forma destaque, pois pe
 
 ### Destaques
 
-Diversas coisas foram adicionadas ao longo do andamento desse projeto que esta em constante atualização:
+Diversas coisas foram adicionadas ao longo do andamento desse projeto, que esta em constante atualização:
 
-- Layout 100% responsivo
-- Sessão inicial com slides e transparências
-- Navegação completa
-- Botões 100% animados
-- Link para o currículo
+- Layout responsivo
+- Rolagem suave com zenscroll
+- Linda sessão inicial com vídeo
+- Link direto para o currículo
+- Botões animados
+- Sessões animadas na transição
 
 
 <br>
@@ -78,6 +79,7 @@ Diversas coisas foram adicionadas ao longo do andamento desse projeto que esta e
 ## Planejamento futuro
 
 - Inserção de projetos novos/atualizados
+- Utilização de framework
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
