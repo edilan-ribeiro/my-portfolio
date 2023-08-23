@@ -1,8 +1,8 @@
 .projects .container .projects-wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  margin: 0 auto;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin: 0 auto 30px;
+  gap: 70px 25px;
   padding: 20px;
 }
 
@@ -16,6 +16,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  color: var(--color-white);
 }
 
 .open-rectangle:before {
@@ -23,10 +24,10 @@
   position: absolute;
   z-index: 1;
   inset: 0;
-  background: var(--color-bg-lighter);
+  background: var(--color-gray);
   transform: scale(0);
   transition: 0.3s ease-out;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .open-rectangle:hover:before {
@@ -43,34 +44,42 @@
   height: 100%;
   transition: 0.3s ease-in-out;
   font-size: var(--font-Xsmall);
+  text-align: center;
 }
 
 .projects .container .projects-wrap .project h3 {
   position: absolute;
   bottom: 20px;
   padding: 10px;
-  background-color: var(--color-bg-darker);
+  background-color: var(--color-bg);
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.8;
   text-align: center;
   font-size: var(--font-small);
 }
 
 .projects .container .projects-wrap .project .project-info:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
-.projects .container .projects-btn {
+.projects .container .projects-wrap .project .project-btn-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 3px;
+}
+
+
+.projects .container .projects-more-btn {
   margin: 30px 0;
 }
 
 
 @media (max-width: 1120px) {
   .projects .container .projects-wrap {
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(1, minmax(350px, 800px));
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 60px;
   }
 }
 
@@ -82,16 +91,13 @@
 
 @media (max-width: 800px) {
   .projects .container .projects-wrap {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
     padding: var(--mobile-padding);
   }
 }
 
 @media (max-width: 600px) {
   .projects .container .projects-wrap {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 400px));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 400px));
   }
 }
