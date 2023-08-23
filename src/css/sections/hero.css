@@ -18,7 +18,7 @@
 
 .hero::before {
   content: "";
-  background-color: rgba(26, 28, 74, 0.203);
+  background-color: rgba(18, 19, 64, 0.4);
   background-attachment: fixed, fixed;
   background-image: url(../../images/overlay-pattern.png), url(../../images/overlay.svg);
   background-position: top left, center center;
