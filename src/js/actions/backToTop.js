@@ -1,4 +1,5 @@
-function backToTop() {const buttonBackToTop = document.getElementById('back-to-top')
+function backToTop() {
+  const buttonBackToTop = document.getElementById('back-to-top')
 
  window.onscroll = function(){buttonAppear()}
  
@@ -19,7 +20,7 @@ function backToTop() {const buttonBackToTop = document.getElementById('back-to-t
     const c = document.documentElement.scrollTop || document.body.scrollTop;
     if (c > 0) {
       window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, c - c / 15);
+      window.scrollTo(0, c - c / 10);
     }
   }
 

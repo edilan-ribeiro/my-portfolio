@@ -27,9 +27,11 @@ function sectionTransition() {
                 }, 200)
 
                 entry.target.addEventListener('animationend', () => {
-                    entry.target.classList.remove(animationClass)
-                    observer.unobserve(entry.target)
-                })
+                    setTimeout(() => {
+                      entry.target.classList.remove(animationClass);
+                      observer.unobserve(entry.target);
+                    }, 600);
+                  });
             }
         })
     })
