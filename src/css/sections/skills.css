@@ -39,6 +39,11 @@
   color: #00ebfe;
 }
 
+.skills-container .info-skills .fa-react,
+.react h3 {
+  color: #61DBFB;
+}
+
 .skills-container .info-skills .fa-github,
 .github h3 {
   color: #b24eda;
