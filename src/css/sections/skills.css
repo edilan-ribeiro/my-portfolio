@@ -44,6 +44,23 @@
   color: #61DBFB;
 }
 
+.skills-container .info-skills .lni-nextjs,
+.nextjs h3 {
+  color: #ffffff;
+  transform: scale(0.9);
+}
+
+.skills-container .info-skills .fa-sass,
+.sass h3 {
+  color: #CD6799;
+}
+
+.skills-container .info-skills .lni-typescript,
+.typescript h3 {
+  color: #007ACC;
+  transform: scale(0.9);
+}
+
 .skills-container .info-skills .fa-github,
 .github h3 {
   color: #b24eda;
