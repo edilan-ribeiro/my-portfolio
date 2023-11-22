@@ -1,6 +1,7 @@
 .about-me {
   padding: 30px;
   margin-bottom: 20px;
+  overflow-x: hidden;
 }
 
 .about-me .container .about-info-wrap {

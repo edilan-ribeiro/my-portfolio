@@ -1,5 +1,6 @@
 .footer {
   margin-top: 60px;
+  overflow-x: hidden;
 }
 
 .footer .footer-wrap {
