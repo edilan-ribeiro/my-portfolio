@@ -1,0 +1,10 @@
+/.vscode
+app url.txt
+fractal1.jpg
+src/images/backgrounds/sky1.jpg
+src/images/backgrounds/space1.jpg
+src/images/backgrounds/space2.jpg
+src/images/backgrounds/zzzz.png
+src/images/projects/base-apparel.png
+src/js/actions/bgChange.js
+src/js/actions/showMore.js
