@@ -1,0 +1,19 @@
+@use '@/styles/partials' as *;
+
+.heroContent {
+	@include flex;
+	@include flexCenter;
+	flex-direction: column;
+	gap: 25px;
+
+	h1 {
+		font-size: $text-big;
+		font-weight: 800;
+		letter-spacing: -2px;
+	}
+
+	h2 {
+		font-size: $text-medium;
+		font-weight: 300;
+	}
+}
