@@ -1,0 +1,23 @@
+@use '@/styles/partials' as *;
+
+.header {
+	.desktopMenu {
+		@include flex;
+		@include flexCenter;
+	
+		li {
+			padding: 0 25px;
+			@include flex;
+			@include flexCenter;
+	
+			a {
+				margin: 0 50px;
+				text-transform: capitalize;
+				font-size: $text-small;
+				letter-spacing: 1px;
+				padding: 10px;
+			}
+		}
+	}
+}
+
