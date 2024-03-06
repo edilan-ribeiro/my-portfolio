@@ -15,8 +15,10 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='pt-br'>
-			<body className={openSans.className}>{children}</body>
+		<html lang='pt-br' suppressHydrationWarning={true}>
+			<body className={openSans.className} suppressHydrationWarning={true}>
+				{children}
+			</body>
 		</html>
 	)
 }
