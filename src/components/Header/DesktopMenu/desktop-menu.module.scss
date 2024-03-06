@@ -1,23 +1,31 @@
 @use '@/styles/partials' as *;
 
 .header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 5;
+
 	.desktopMenu {
 		@include flex;
 		@include flexCenter;
-	
+
 		li {
 			padding: 0 25px;
 			@include flex;
 			@include flexCenter;
-	
+
 			a {
+				display: inline-block;
 				margin: 0 50px;
 				text-transform: capitalize;
 				font-size: $text-small;
 				letter-spacing: 1px;
 				padding: 10px;
+				font-weight: 500;
 			}
 		}
 	}
 }
-
