@@ -8,26 +8,32 @@
 
 html {
 	font-size: 62.5%;
+
+	body {
+		max-width: 100vw;
+		overflow-x: hidden;
+		background-color: $bg;
+		color: $white;
+
+		a {
+			text-decoration: none;
+			color: var(--color-white);
+		}
+
+		ul {
+			list-style: none;
+		}
+	}
 }
 
-body {
-	max-width: 100vw;
-	overflow-x: hidden;
-	background-color: $bg;
-	color: $white;
+button {
+	border-radius: 0;
+	text-align: inherit;
+	background: none;
+	box-shadow: none;
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	color: inherit;
+	font: inherit;
 }
-
-// UPDATE WITH PROJECT DATA
-
-// 	button {
-// 		border-radius: 0;
-// 		text-align: inherit;
-// 		background: none;
-// 		box-shadow: none;
-// 		padding: 0;
-// 		cursor: pointer;
-// 		border: none;
-// 		color: inherit;
-// 		font: inherit;
-// 	}
-// }
