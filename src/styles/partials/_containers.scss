@@ -11,28 +11,3 @@
 	max-width: 1140px;
 	margin: auto;
 }
-
-.sectionTitle {
-	padding: 30px 0;
-	font-size: 3rem;
-	text-align: center;
-	font-weight: 700;
-	text-transform: uppercase;
-
-	.separator {
-		max-width: 200px;
-		height: 3px;
-		margin: 20px auto;
-		opacity: 0.7;
-
-		background: linear-gradient(
-			90deg,
-			rgba(121, 15, 121, 1) 0%,
-			rgba(96, 36, 138, 1) 21%,
-			rgba(103, 17, 163, 1) 37%,
-			rgba(2, 72, 106, 1) 51%,
-			rgba(0, 48, 187, 1) 68%,
-			rgba(0, 140, 168, 1) 100%
-		);
-	}
-}

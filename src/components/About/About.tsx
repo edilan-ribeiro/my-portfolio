@@ -1,14 +1,12 @@
 import Image from 'next/image'
 import selfie from '@/assets/about/selfie-about.png'
 import aboutStyles from './about.module.scss'
+import { SectionTitle } from '../SectionTitle/SectionTitle'
 
-const About = () => {
+export const About = () => {
 	return (
 		<div className={aboutStyles.contentContainer}>
-			<div className={aboutStyles.sectionTitle}>
-				<h2>Sobre mim</h2>
-				<div className={aboutStyles.separator} />
-			</div>
+			<SectionTitle sectionTitle='Sobre mim' />
 
 			<div className={aboutStyles.infoWrap}>
 				<div className={aboutStyles.selfieSide}>
@@ -61,5 +59,3 @@ const About = () => {
 		</div>
 	)
 }
-
-export default About
