@@ -1,0 +1,62 @@
+[
+	{
+		"name": "HTML",
+		"color": "html",
+		"description": "Possuo um domínio sólido em html, a linguagem base da web, buscando sempre aplicar conceitos como código limpo e elementos semânticos, criando dessa forma estruturas de página bem organizadas."
+	},
+	{
+		"name": "CSS",
+		"color": "css",
+		"description": "Estou familiarizado com as propriedades e valores do CSS, permitindo-me ajustar a posição dos elementos na página com técnicas de flexbox e grid, além de criar layouts responsivos para diferentes dispositivos e tamanhos de tela."
+	},
+	{
+		"name": "JavaScript",
+		"color": "javascript",
+		"description": "Familiaridade com recursos como arrow functions, destructuring e template literals. Utilização de funções, estruturas de repetição, eventos, manipulação do DOM e integração de APIs para desenvolver projetos inovadores que aprimorem a experiência do usuário."
+	},
+	{
+		"name": "TypeScript",
+		"color": "typescript",
+		"description": "Uso a tipagem no JavaScript para aprimorar a robustez e segurança do código. Essa abordagem assegura que apenas dados do tipo apropriado sejam manipulados, prevenindo conflitos e proporcionando uma escalabilidade mais eficiente."
+	},
+	{
+		"name": "React",
+		"color": "react",
+		"description": "Faço utilização da sintaxe JSX/TSX em conjunto com técnicas como a gestão de estados e contextos através de hooks, para a criação de componentes reutilizavéis tornando a manutenção e escalabilidade do código mais fácil."
+	},
+	{
+		"name": "Next.js",
+		"color": "nextjs",
+		"description": "Aplicação de desenvolvimento web com Server-Side Rendering (SSR) e seus server components, Static Site Generation (SSG) e roteamento interno, elevando o desempenho e otimização em projetos web."
+	},
+	{
+		"name": "Sass",
+		"color": "sass",
+		"description": "Aplicação de mixins, variáveis e nesting na estilização proporcionam eficiência e escalabilidade, encapsulando estilos reutilizáveis, oferecendo flexibilidade global e organizando hierarquicamente o código."
+	},
+	{
+		"name": "Tailwind",
+		"color": "tailwind",
+		"description": "Criação de estilos utilizando as funcionalidades do Tailwind, permitindo a estilização de elementos e componentes de forma responsiva e organizada."
+	},
+	{
+		"name": "Git/GitHub",
+		"color": "git",
+		"description": "Tenho conhecimento dos princípios fundamentais do Git como a criação de repositórios, inicialização de projetos, criação de branches e commits. Utilizo comandos para gerenciar o fluxo de trabalho no código buscando manter commits pequenos e focados."
+	},
+	{
+		"name": "PostgreSQL",
+		"color": "postgresql",
+		"description": "Utilização de banco de dados relacionais como o PostgreSQL, permitindo a manipulação de dados e consultas complexas."
+	},
+	{
+		"name": "Node.js",
+		"color": "nodejs",
+		"description": "Utilizo o Node.js para construir servidores web e APIs, explorando sua arquitetura assíncrona para lidar com múltiplas requisições de forma eficiente."
+	},
+	{
+		"name": "Express",
+		"color": "express",
+		"description": "Utilização de sua modularidade, middlewares personalizados e rotas que facilitam a implementação de diversas funcionalidades no backend."
+	}
+]

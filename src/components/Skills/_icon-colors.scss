@@ -1,0 +1,22 @@
+@use 'sass:map';
+
+$iconColors: (
+	'html': #ffa200,
+	'css': #264de4,
+	'javascript': #f4fb07,
+	'typescript': #007acc,
+	'react': #61dbfb,
+	'nextjs': #ffffff,
+	'sass': #cd6799,
+	'tailwind': #06b6d4,
+	'git': #fb5050,
+	'postgresql': #0064a5,
+	'nodejs': #3c873a,
+	'express': #68a063,
+);
+
+@each $icon, $color in $iconColors {
+	.#{$icon} {
+		color: $color;
+	}
+}
