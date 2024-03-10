@@ -4,13 +4,12 @@ import Image from 'next/image'
 import { IoIosLink } from 'react-icons/io'
 import { FaGithub } from 'react-icons/fa'
 import projectsStyles from './projects.module.scss'
-import imagem from '@/assets/about/selfie-about.png'
+import { formatName } from './helpers/formatName'
 
 export async function Projects() {
 	let projectsData = await fetchProjectData()
 
-	//TODO: ACESSAR README DATA PRA PEGAR A TECH
-	//TODO: HELPER PARA FORMATAR O NOME
+	//TODO: ACESSAR README DATA PRA PEGAR A TECH COM REGEX NA BADGE
 	//TODO: BOTÃO AO FINAL PARA O LINK GERAL DE REPOS
 	//TODO: ADD +2 REPOS
 
@@ -24,7 +23,7 @@ export async function Projects() {
 						<div className={projectsStyles.cardImage}>
 							<Image
 								src={`https://raw.githubusercontent.com/edilan-ribeiro/${project.name}/main/public/cover.png`}
-								alt={project.name}
+								alt={formatName(project.name)}
 								fill
 								style={{
 									objectFit: 'cover',
@@ -35,7 +34,7 @@ export async function Projects() {
 
 						<div className={projectsStyles.cardInfo}>
 							<div className={projectsStyles.cardText}>
-								<h3>{project.name}</h3>
+								<h3>{formatName(project.name)}</h3>
 								<p>{project.description}</p>
 								<ul className={projectsStyles.cardTech}>
 									<li>tecnologias</li>
