@@ -33,6 +33,10 @@ export async function fetchProjectData(): Promise<projectData[]> {
 		filteredProjectData = sortedProjectData.filter((project) =>
 			project.topics.includes('portfolio-project')
 		)
+
+		let reorderProjects = filteredProjectData.splice(2, 2)
+
+		filteredProjectData = [...filteredProjectData, ...reorderProjects]
 	}
 
 	return filteredProjectData
