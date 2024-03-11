@@ -1,0 +1,14 @@
+@use '@/styles/partials' as *;
+
+.cardTech {
+    @include flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 10px 0 5px;
+
+    li {
+        background-color: $gray;
+        border-radius: 15px;
+        padding: 3px 5px;
+    }
+}
