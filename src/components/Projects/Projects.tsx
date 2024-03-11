@@ -8,7 +8,7 @@ import { formatName } from './helpers/formatName'
 import { TechStack } from './TechStack/TechStack'
 
 export async function Projects() {
-	const projectsData = await fetchProjectData()
+	const projectsData = await fetchProjectData()	
 
 	//TODO: BOTÃO AO FINAL PARA O LINK GERAL DE REPOS
 

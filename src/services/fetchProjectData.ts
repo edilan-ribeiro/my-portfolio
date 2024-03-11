@@ -11,12 +11,14 @@ interface projectData {
 export async function fetchProjectData(): Promise<projectData[]> {
 	let projectData: projectData[] = []
 
+
 	try {
 		const url = `https://api.github.com/users/edilan-ribeiro/repos`
+		const token = process.env.GITHUB_TOKEN
 
 		const dataCacheTime = 60 * 60 * 24 * 25 // 25 days to revalidate cache
 
-		const getData = await fetch(url, { next: { revalidate: dataCacheTime } })
+		const getData = await fetch(url, { headers: { Authorization: `token ${token}` }, next: { revalidate: dataCacheTime } })
 
 		projectData = await getData.json()
 	} catch (error) {
