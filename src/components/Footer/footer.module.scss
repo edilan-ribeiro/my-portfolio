@@ -1,0 +1,11 @@
+@use '@/styles/partials' as *;
+
+.footer {
+	background-color: $bg-darker;
+	opacity: 0.8;
+	font-size: $text-Xsmall;
+	text-align: center;
+	padding: 24px 0;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
