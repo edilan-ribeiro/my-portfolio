@@ -1,0 +1,10 @@
+@use './variables' as *;
+
+@mixin buttonPattern {
+	background-color: #006bdd;
+	padding: 8px 42px;
+	font-size: $text-Xsmall;
+	letter-spacing: 0.5px;
+	border-radius: 10px;
+	border: 1px solid $bg-lighter;
+}
