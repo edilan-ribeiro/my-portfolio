@@ -1,0 +1,81 @@
+@use '@/styles/partials' as *;
+
+.contact {
+	@include flex;
+	@include flexCenter;
+
+	.contactContent {
+		background-color: $bg-darker;
+		padding: 100px;
+		border-radius: 10px;
+
+		.getInTouch {
+			margin-bottom: 42px;
+
+			h3 {
+				font-size: $text-normal;
+				letter-spacing: 0.5px;
+			}
+		}
+
+		.form {
+			width: 500px;
+			height: 350px;
+			margin-bottom: 14px;
+
+			@mixin inputs {
+				width: 100%;
+				background-color: $bg;
+				border-radius: 10px;
+				border: 1px solid $gray;
+				color: $white;
+				padding-left: 15px;
+				font-size: $text-Xsmall;
+				letter-spacing: 1.5px;
+
+				&::placeholder {
+					padding-left: 16px;
+					font-size: $text-default;
+				}
+
+				&:focus {
+					border: 1px solid $bg-lighter;
+				}
+			}
+
+			.formFields {
+				@include flex;
+
+				flex-direction: column;
+				gap: 10px;
+				margin-bottom: 28px;
+				letter-spacing: 1.5px;
+
+				label {
+					font-weight: 200;
+					font-size: $text-default;
+				}
+
+				input {
+					@include inputs;
+
+					height: 42px;
+				}
+
+				textarea {
+					@include inputs;
+
+					height: 100px;
+					resize: none;
+					font-family: 'Open Sans', sans-serif;
+					padding-top: 8px;
+					overflow-wrap: break-word;
+				}
+			}
+		}
+
+		.formButton {
+			@include buttonPattern;
+		}
+	}
+}
