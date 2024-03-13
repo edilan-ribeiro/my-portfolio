@@ -15,15 +15,17 @@
 	background-size: cover;
 }
 
+
 .about {
 	padding: 30px;
-	margin-bottom: 20px;
+	
+	@include sectionsMargin;
 }
 
 .skills {
-	margin-bottom: 50px;
+	@include sectionsMargin;
 }
 
 .projects {
-	margin-bottom: 80px;
+	@include sectionsMargin;
 }
