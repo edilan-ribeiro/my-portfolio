@@ -8,9 +8,7 @@ import { formatName } from './helpers/formatName'
 import { TechStack } from './TechStack/TechStack'
 
 export async function Projects() {
-	const projectsData = await fetchProjectData()	
-
-	//TODO: BOTÃO AO FINAL PARA O LINK GERAL DE REPOS
+	const projectsData = await fetchProjectData()
 
 	return (
 		<div className={projectsStyles.contentContainer}>
@@ -20,15 +18,17 @@ export async function Projects() {
 				{projectsData.map((project) => (
 					<div key={project.id} className={projectsStyles.projectsCard}>
 						<div className={projectsStyles.cardImage}>
-							<Image
-								src={`https://raw.githubusercontent.com/edilan-ribeiro/${project.name}/main/public/cover.png`}
-								alt={formatName(project.name)}
-								fill
-								style={{
-									objectFit: 'cover',
-									objectPosition: 'left top',
-								}}
-							/>
+							<a href={project.html_url} target='_blank'>
+								<Image
+									src={`https://raw.githubusercontent.com/edilan-ribeiro/${project.name}/main/public/cover.png`}
+									alt={formatName(project.name)}
+									fill
+									style={{
+										objectFit: 'cover',
+										objectPosition: 'left top',
+									}}
+								/>
+							</a>
 						</div>
 
 						<div className={projectsStyles.cardInfo}>
@@ -53,6 +53,11 @@ export async function Projects() {
 						</div>
 					</div>
 				))}
+			</div>
+			<div className={projectsStyles.moreProjects}>
+				<a href='https://github.com/edilan-ribeiro?tab=repositories' target='_blank'>
+					Ver mais projetos
+				</a>
 			</div>
 		</div>
 	)
