@@ -87,6 +87,14 @@
 
 		.formButton {
 			@include buttonPattern;
+			@include flex;
+			@include flexCenter;
+
+			gap: 5px;
+
+			&:disabled {
+				background-color: $button-disabled;
+			}
 		}
 	}
 }
