@@ -16,17 +16,17 @@ export const Contact = () => {
 		control,
 		formState: { errors },
 	} = useForm<z.infer<typeof contactFormSchema>>({ resolver: zodResolver(contactFormSchema) })
-	
+
 	const messageSize = useWatch({ control, name: 'message', defaultValue: 'default' })
 
-	const [formSent, setformSent] = useState(false)
+	const [formSent, setformSent] = useState<boolean | undefined>()
 	const [isLoading, setIsLoading] = useState(false)
 
 	async function sendMessage(formData: z.infer<typeof contactFormSchema>) {
 		try {
 			setIsLoading(true)
 
-			await fetch('/api/send', {
+			const response = await fetch('/api/send', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -34,10 +34,20 @@ export const Contact = () => {
 				body: JSON.stringify(formData),
 			})
 
+			const sendMailResult = await response.json()
+
+			if (sendMailResult.data.error === null) {
+				setformSent(true)
+			} else {
+				console.log(sendMailResult.data.error)
+				setformSent(false)
+			}
+
 			setIsLoading(false)
-			setformSent(true)
 		} catch (error) {
-			console.log(`Ocorreu um erro, motivo: ${error}`)
+			setIsLoading(false)
+			setformSent(false)
+			console.log(`Erro na execução: ${error}`)
 		}
 	}
 
@@ -109,10 +119,21 @@ export const Contact = () => {
 						type='submit'
 						className={contactStyles.formButton}
 						form='contact-form'
-						disabled={isLoading}
+						disabled={isLoading || formSent === true || formSent === false}
+						data-sent={formSent}
 					>
-						{isLoading ? 'Enviando' : 'Enviar'}
-						{isLoading && <PulseLoader size={10} color='#ffffffb4' />}
+						{isLoading ? (
+							<>
+								Enviando
+								<PulseLoader size={10} color='#ffffffb4' />
+							</>
+						) : formSent ? (
+							'Enviado com sucesso! ✅'
+						) : formSent === false ? (
+							'Falha no enviar, recarregue a página! ❌'
+						) : (
+							'Enviar'
+						)}
 					</button>
 				</div>
 			</div>

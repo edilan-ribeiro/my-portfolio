@@ -97,8 +97,22 @@
 
 			gap: 5px;
 
+			&:enabled {
+				cursor: pointer;
+			}
+
 			&:disabled {
 				background-color: $darker-gray;
+			}
+
+			&[data-sent='true'] {
+				box-shadow: 0px 0px 12px 2px $accept-green;
+				transition: 0.3s ease-in-out;
+			}
+
+			&[data-sent='false'] {
+				box-shadow: 0px 0px 12px 2px $error-message;
+				transition: 0.3s ease-in-out;
 			}
 		}
 	}
