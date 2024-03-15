@@ -24,10 +24,9 @@ export async function POST(req: NextRequest, res: NextResponse) {
 				text: `${name} enviou com o email ${email} e a seguinte mensagem: ${message}`,
 			})
 
-			return NextResponse.json({ message: 'Message has been sent' }, { status: 200 })
+			return NextResponse.json({data}, { status: 200 })
 		} catch (error) {
 			console.log(error)
-
 			return NextResponse.json(
 				{ message: 'There has been an error while sending  the message' },
 				{ status: 500 }
