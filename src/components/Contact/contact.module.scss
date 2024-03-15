@@ -28,7 +28,7 @@
 				border-radius: 10px;
 				border: 1px solid $gray;
 				color: $white;
-				padding-left: 15px;
+				padding: 0 15px;
 				font-size: $text-Xsmall;
 				letter-spacing: 1.5px;
 
@@ -81,6 +81,11 @@
 					font-family: 'Open Sans', sans-serif;
 					padding-top: 8px;
 					overflow-wrap: break-word;
+					overflow-y: scroll;
+
+					&::-webkit-scrollbar {
+						display: none;
+					}
 				}
 			}
 		}
@@ -93,7 +98,7 @@
 			gap: 5px;
 
 			&:disabled {
-				background-color: $button-disabled;
+				background-color: $darker-gray;
 			}
 		}
 	}

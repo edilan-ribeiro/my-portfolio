@@ -1,6 +1,6 @@
 'use client'
 
-import { useForm } from 'react-hook-form'
+import { useForm, useWatch } from 'react-hook-form'
 import contactStyles from './contact.module.scss'
 import { contactFormSchema } from '@/lib/contactFormSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -13,8 +13,11 @@ export const Contact = () => {
 	const {
 		register,
 		handleSubmit,
+		control,
 		formState: { errors },
 	} = useForm<z.infer<typeof contactFormSchema>>({ resolver: zodResolver(contactFormSchema) })
+	
+	const messageSize = useWatch({ control, name: 'message', defaultValue: 'default' })
 
 	const [formSent, setformSent] = useState(false)
 	const [isLoading, setIsLoading] = useState(false)
@@ -44,7 +47,7 @@ export const Contact = () => {
 			<div className={contactStyles.contact}>
 				<div className={contactStyles.contactContent}>
 					<div className={contactStyles.getInTouch}>
-						<h3>Vamos trabalhar juntos</h3>
+						<h3>Vamos trabalhar juntos!</h3>
 					</div>
 
 					<form
@@ -88,12 +91,18 @@ export const Contact = () => {
 								id='message'
 								placeholder='Escreva sua mensagem...'
 								{...register('message')}
+								maxLength={400}
 							/>
-							{errors.message && (
-								<p className={contactStyles.errorMessage}>
-									{errors.message.message}
-								</p>
-							)}
+							<div className={contactStyles.bottomOptions}>
+								{errors.message && (
+									<p className={contactStyles.errorMessage}>
+										{errors.message.message}
+									</p>
+								)}
+								{messageSize.length > 100 && (
+									<p>{messageSize.length}/400</p>
+								)}
+							</div>
 						</div>
 					</form>
 					<button
