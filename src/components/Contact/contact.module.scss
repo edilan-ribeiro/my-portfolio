@@ -40,6 +40,11 @@
 				&:focus {
 					border: 1px solid $bg-lighter;
 				}
+
+				&:disabled {
+					opacity: 0.2;
+					transition: 0.3s ease-in-out;
+				}
 			}
 
 			.formFields {
