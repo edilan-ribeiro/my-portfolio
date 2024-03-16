@@ -68,6 +68,7 @@ export const Contact = () => {
 								type='text'
 								id='name'
 								placeholder='Digite seu nome'
+								disabled={isLoading || formSent === true || formSent === false}
 								maxLength={40}
 								{...register('name')}
 							/>
@@ -83,6 +84,7 @@ export const Contact = () => {
 								type='text'
 								id='email'
 								placeholder='Coloque seu email'
+								disabled={isLoading || formSent === true || formSent === false}
 								maxLength={130}
 								{...register('email')}
 							/>
@@ -99,6 +101,7 @@ export const Contact = () => {
 							<textarea
 								id='message'
 								placeholder='Escreva sua mensagem...'
+								disabled={isLoading || formSent === true || formSent === false}
 								maxLength={400}
 								{...register('message')}
 								
