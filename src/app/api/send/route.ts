@@ -15,7 +15,15 @@ export async function POST(req: NextRequest, res: NextResponse) {
 			from: `delivered@resend.dev`,
 			to: ['edilanbusiness@gmail.com'],
 			subject: 'Contato pelo portfólio',
-			text: `${name} enviou com o email ${email} e a seguinte mensagem: ${message}`,
+			html: `
+			<p><strong>Enviado por:</strong> ${name}</p>
+
+			<p><strong>Email:</strong> ${email}</p>
+			<br/>
+			
+			<p><strong>Mensagem:</strong></p>
+			<p>${message}</p>
+			`,
 		})
 
 		return NextResponse.json({ data }, { status: 200 })
