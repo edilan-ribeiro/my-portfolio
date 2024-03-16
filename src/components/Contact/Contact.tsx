@@ -8,6 +8,7 @@ import { SectionTitle } from '../SectionTitle/SectionTitle'
 import { useState } from 'react'
 import { z } from 'zod'
 import { PulseLoader } from 'react-spinners'
+import { processApiResponse } from './utils/processApiResponse'
 
 export const Contact = () => {
 	const {
@@ -34,20 +35,16 @@ export const Contact = () => {
 				body: JSON.stringify(formData),
 			})
 
-			const sendMailResult = await response.json()
-
-			if (sendMailResult.data.error === null) {
-				setformSent(true)
-			} else {
-				console.log(sendMailResult.data.error)
-				setformSent(false)
-			}
+			await processApiResponse({ response, setFormSent: setformSent })
 
 			setIsLoading(false)
 		} catch (error) {
 			setIsLoading(false)
 			setformSent(false)
-			console.log(`Erro na execução: ${error}`)
+
+			console.log(error)
+
+			console.log('Error while sending message')
 		}
 	}
 
@@ -71,6 +68,7 @@ export const Contact = () => {
 								type='text'
 								id='name'
 								placeholder='Digite seu nome'
+								maxLength={40}
 								{...register('name')}
 							/>
 							{errors.name && (
@@ -85,6 +83,7 @@ export const Contact = () => {
 								type='text'
 								id='email'
 								placeholder='Coloque seu email'
+								maxLength={130}
 								{...register('email')}
 							/>
 							{errors.email && (
@@ -100,8 +99,9 @@ export const Contact = () => {
 							<textarea
 								id='message'
 								placeholder='Escreva sua mensagem...'
-								{...register('message')}
 								maxLength={400}
+								{...register('message')}
+								
 							/>
 							<div className={contactStyles.bottomOptions}>
 								{errors.message && (
