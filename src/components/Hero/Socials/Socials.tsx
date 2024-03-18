@@ -30,7 +30,7 @@ export const Socials = () => {
 			<ul className={socialsStyle.socials}>
 				{socials.map((items) => (
 					<li key={items.name}>
-						<a href={items.link} target='_blank'>
+						<a href={items.link} target='_blank' aria-label={`link to ${items.name}`}>
 							{items.icon}
 						</a>
 					</li>
