@@ -8,16 +8,18 @@
 
 html {
 	font-size: 62.5%;
+	--scroll-behavior: smooth !important;
+	scroll-behavior: smooth !important;
 
 	body {
 		max-width: 100vw;
 		overflow-x: hidden;
 		background-color: $bg;
-		color: $white;
+		color: $font-bright;
 
 		a {
 			text-decoration: none;
-			color: $white;
+			color: $font-bright;
 		}
 
 		ul {
@@ -26,7 +28,8 @@ html {
 	}
 }
 
-
-input, textarea, button {
+input,
+textarea,
+button {
 	all: unset;
 }
