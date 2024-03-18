@@ -8,10 +8,15 @@ export const Header = () => {
 	const [isMobile, setIsMobile] = useState<boolean>()
 
 	useEffect(() => {
-		if (window.innerWidth < 900) {
-			setIsMobile(true)
-		} else {
-			setIsMobile(false)
+		if (typeof window !== 'undefined') {
+			const handleResize = () => {
+				setIsMobile(window.innerWidth < 900)
+			}
+
+			handleResize()
+			window.addEventListener('resize', handleResize)
+
+			return () => window.removeEventListener('resize', handleResize)
 		}
 	}, [])
 
