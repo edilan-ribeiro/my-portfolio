@@ -3,23 +3,37 @@
 .header {
 	position: absolute;
 	width: 100%;
-	top: 0;
+	top: 8px;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 5;
 
+	&[data-scrolled='true'] {
+		position: fixed;
+		top: 0;
+	}
+
 	.desktopMenu {
 		@include flex;
-		@include flexCenter;
+		padding: 0 30px;
+		justify-content: space-between;
+
+		&[data-scrolled='true'] {
+			background: rgba(0, 0, 0, 0.12);
+			border-radius: 16px;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(9.5px);
+			-webkit-backdrop-filter: blur(9.5px);
+			border: 1px solid rgb(70, 70, 70);
+		}
 
 		li {
-			padding: 0 25px;
 			@include flex;
 			@include flexCenter;
 
 			a {
 				display: inline-block;
-				margin: 0 50px;
+				margin: 0 20px;
 				text-transform: capitalize;
 				font-size: $text-small;
 				letter-spacing: 1px;
