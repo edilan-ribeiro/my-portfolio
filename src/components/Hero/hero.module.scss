@@ -1,19 +1,74 @@
 @use '@/styles/partials' as *;
 
+.hero {
+	@include flex;
+	@include flexCenter;
+
+	min-height: 100dvh;
+	position: relative;
+
+	.heroBackground {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&::after {
+			content: '';
+			background-color: rgba(17, 17, 17, 0.18);
+			inset: 0;
+			position: absolute;
+		}
+	}
+}
+
 .heroContent {
 	@include flex;
 	@include flexCenter;
 	flex-direction: column;
-	gap: 25px;
+	gap: 15px;
 
 	h1 {
 		font-size: $text-big;
 		font-weight: 800;
 		letter-spacing: -2px;
+		color: $white;
 	}
 
 	h2 {
 		font-size: $text-medium;
 		font-weight: 300;
+		color: $white;
+	}
+
+	@media (max-width: $screen-phone) {
+		text-align: center;
+	}
+}
+
+.scrollIndicator {
+	position: absolute;
+	font-size: $text-small;
+	bottom: 40px;
+	animation: blink 1s infinite ease-in-out;
+	left: 50%;
+	transform: translateX(-50%);
+
+	@keyframes blink {
+		0% {
+			bottom: 40px;
+			opacity: 0.8;
+		}
+		100% {
+			bottom: 25px;
+			opacity: 0;
+		}
 	}
 }
