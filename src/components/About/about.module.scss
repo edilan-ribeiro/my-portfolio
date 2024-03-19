@@ -1,5 +1,11 @@
 @use '@/styles/partials' as *;
 
+.about {
+	padding: 30px;
+	
+	@include sectionsMargin;
+}
+
 .infoWrap {
 	padding: 30px 0;
 	@include flex;
