@@ -1,11 +1,15 @@
 @use '@/styles/partials' as *;
 
-.projectsWrapper {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-	margin: 0 auto 30px;
-	gap: 70px 25px;
-	padding: 20px;
+.projects {
+	@include sectionsMargin;
+
+	.projectsWrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		margin: 0 auto 30px;
+		gap: 70px 25px;
+		padding: 20px;
+	}
 }
 
 .projectsCard {
@@ -66,7 +70,7 @@
 	}
 }
 
-.moreProjects {
+.moreProjectsBtn {
 	@include flex;
 	@include flexCenter;
 

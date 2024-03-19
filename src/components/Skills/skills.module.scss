@@ -1,32 +1,38 @@
 @use '@/styles/partials' as *;
 @use './icon-colors' as *;
 
-.skillsContainer {
-	@include flex;
-	text-align: center;
-	flex-wrap: wrap;
-	justify-content: center;
+.skills {
+	@include sectionsMargin;
 
-	.skillCard {
-		max-width: 350px;
-		padding: 20px;
-		font-weight: 300;
-
-		.iconContainer {
-			@include flex;
-			@include flexCenter;
-			font-size: $text-big;
-			margin-bottom: 15px;
-		}
-
-		h3 {
-			font-size: $text-medium;
-			font-weight: 600;
-			margin-bottom: 30px;
-		}
-
-		p {
-			font-size: $text-Xsmall;
+	.skillsContainer {
+		@include flex;
+		text-align: center;
+		flex-wrap: wrap;
+		justify-content: center;
+	
+		.skillCard {
+			max-width: 350px;
+			padding: 20px;
+			font-weight: 300;
+	
+			.iconContainer {
+				@include flex;
+				@include flexCenter;
+				font-size: $text-big;
+				margin-bottom: 15px;
+			}
+	
+			h3 {
+				font-size: $text-medium;
+				font-weight: 600;
+				margin-bottom: 30px;
+			}
+	
+			p {
+				font-size: $text-Xsmall;
+			}
 		}
 	}
 }
+
+

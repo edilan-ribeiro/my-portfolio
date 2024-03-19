@@ -27,29 +27,26 @@ export const Skills = () => {
 	}
 
 	return (
-		<div className={skillsStyles.contentContainer}>
-			
-			<SectionTitle sectionTitle='Habilidades' />
+		<section className={skillsStyles.skills} id='skills'>
+			<div className={skillsStyles.contentContainer}>
+				<SectionTitle sectionTitle='Habilidades' />
 
-			<div className={skillsStyles.skillsContainer}>
+				<div className={skillsStyles.skillsContainer}>
+					{skillData.map((skill) => (
+						<div key={skill.name} className={skillsStyles.skillCard}>
+							<div className={skillsStyles[skill.color]}>
+								<div className={skillsStyles.iconContainer}>
+									{icons[skill.name]}
+								</div>
 
-				{skillData.map((skill) => (
-					<div key={skill.name} className={skillsStyles.skillCard}>
-						
-						<div className={skillsStyles[skill.color]}>
-
-							<div className={skillsStyles.iconContainer}>
-								{icons[skill.name]}
+								<h3>{skill.name}</h3>
 							</div>
 
-							<h3>{skill.name}</h3>
+							<p>{skill.description}</p>
 						</div>
-
-						<p>{skill.description}</p>
-					</div>
-				))}
-
+					))}
+				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

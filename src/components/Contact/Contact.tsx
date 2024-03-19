@@ -49,97 +49,114 @@ export const Contact = () => {
 	}
 
 	return (
-		<div className={contactStyles.contentContainer}>
-			<SectionTitle sectionTitle='Contato' />
-			<div className={contactStyles.contact}>
-				<div className={contactStyles.contactContent}>
-					<div className={contactStyles.getInTouch}>
-						<h3>Vamos trabalhar juntos!</h3>
-					</div>
+		<section id='contact'>
+			<div className={contactStyles.contentContainer}>
+				<SectionTitle sectionTitle='Contato' />
+				<div className={contactStyles.contact}>
+					<div className={contactStyles.contactContent}>
+						<div className={contactStyles.getInTouch}>
+							<h3>Vamos trabalhar juntos!</h3>
+						</div>
 
-					<form
-						className={contactStyles.form}
-						id='contact-form'
-						onSubmit={handleSubmit(sendMessage)}
-					>
-						<div className={contactStyles.formFields}>
-							<label htmlFor='name'>Nome</label>
-							<input
-								type='text'
-								id='name'
-								placeholder='Digite seu nome'
-								disabled={isLoading || formSent === true || formSent === false}
-								maxLength={40}
-								{...register('name')}
-							/>
-							{errors.name && (
-								<p className={contactStyles.errorMessage}>
-									{errors.name.message}
-								</p>
-							)}
-						</div>
-						<div className={contactStyles.formFields}>
-							<label htmlFor='email'>Email</label>
-							<input
-								type='text'
-								id='email'
-								placeholder='Coloque seu email'
-								disabled={isLoading || formSent === true || formSent === false}
-								maxLength={130}
-								{...register('email')}
-							/>
-							{errors.email && (
-								<p className={contactStyles.errorMessage}>
-									{errors.email.message}
-								</p>
-							)}
-						</div>
-						<div
-							className={`${contactStyles.formFields} ${contactStyles.messageField}`}
+						<form
+							className={contactStyles.form}
+							id='contact-form'
+							onSubmit={handleSubmit(sendMessage)}
 						>
-							<label htmlFor='message'>Mensagem</label>
-							<textarea
-								id='message'
-								placeholder='Escreva sua mensagem...'
-								disabled={isLoading || formSent === true || formSent === false}
-								maxLength={400}
-								{...register('message')}
-								
-							/>
-							<div className={contactStyles.bottomOptions}>
-								{errors.message && (
+							<div className={contactStyles.formFields}>
+								<label htmlFor='name'>Nome</label>
+								<input
+									type='text'
+									id='name'
+									placeholder='Digite seu nome'
+									disabled={
+										isLoading ||
+										formSent === true ||
+										formSent === false
+									}
+									maxLength={40}
+									{...register('name')}
+								/>
+								{errors.name && (
 									<p className={contactStyles.errorMessage}>
-										{errors.message.message}
+										{errors.name.message}
 									</p>
 								)}
-								{messageSize.length > 100 && (
-									<p>{messageSize.length}/400</p>
+							</div>
+							<div className={contactStyles.formFields}>
+								<label htmlFor='email'>Email</label>
+								<input
+									type='text'
+									id='email'
+									placeholder='Coloque seu email'
+									disabled={
+										isLoading ||
+										formSent === true ||
+										formSent === false
+									}
+									maxLength={130}
+									{...register('email')}
+								/>
+								{errors.email && (
+									<p className={contactStyles.errorMessage}>
+										{errors.email.message}
+									</p>
 								)}
 							</div>
-						</div>
-					</form>
-					<button
-						type='submit'
-						className={contactStyles.formButton}
-						form='contact-form'
-						disabled={isLoading || formSent === true || formSent === false}
-						data-sent={formSent}
-					>
-						{isLoading ? (
-							<>
-								Enviando
-								<PulseLoader size={10} color='#ffffffb4' />
-							</>
-						) : formSent ? (
-							'Enviado com sucesso! ✅'
-						) : formSent === false ? (
-							'Falha no enviar, recarregue a página! ❌'
-						) : (
-							'Enviar'
-						)}
-					</button>
+							<div
+								className={`${contactStyles.formFields} ${contactStyles.messageField}`}
+							>
+								<label htmlFor='message'>Mensagem</label>
+								<textarea
+									id='message'
+									placeholder='Escreva sua mensagem...'
+									disabled={
+										isLoading ||
+										formSent === true ||
+										formSent === false
+									}
+									maxLength={400}
+									{...register('message')}
+								/>
+								<div className={contactStyles.bottomOptions}>
+									{errors.message && (
+										<p
+											className={
+												contactStyles.errorMessage
+											}
+										>
+											{errors.message.message}
+										</p>
+									)}
+									{messageSize.length > 100 && (
+										<p>{messageSize.length}/400</p>
+									)}
+								</div>
+							</div>
+						</form>
+						<button
+							type='submit'
+							className={contactStyles.formButton}
+							form='contact-form'
+							disabled={isLoading || formSent === true || formSent === false}
+							data-sent={formSent}
+						>
+							{isLoading ? (
+								<>
+									Enviando
+									<PulseLoader size={10} color='#ffffffb4' />
+								</>
+							) : formSent ? (
+								'Enviado com sucesso! ✅'
+							) : formSent === false ? (
+								'Falha no enviar, recarregue a página! ❌'
+							) : (
+								'Enviar'
+							)}
+						</button>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
