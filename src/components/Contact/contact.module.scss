@@ -4,121 +4,143 @@
 	@include flex;
 	@include flexCenter;
 
-	.contactContent {
-		background-color: $bg-darker;
-		padding: 80px 100px;
+	padding: 20px;
+}
+
+.contactContent {
+	background-color: $bg-darker;
+	padding: 80px 100px;
+	border-radius: 10px;
+
+	.getInTouch {
+		margin-bottom: 42px;
+
+		h3 {
+			font-size: $text-normal;
+			letter-spacing: 0.5px;
+		}
+	}
+}
+
+.form {
+	max-width: 500px;
+	margin-bottom: 14px;
+
+	@mixin inputs {
+		width: 100%;
+		background-color: $bg;
 		border-radius: 10px;
+		border: 1px solid $gray;
+		color: $font-bright;
+		padding: 0 15px;
+		font-size: $text-Xsmall;
+		letter-spacing: 1.5px;
+		box-sizing: border-box;
 
-		.getInTouch {
-			margin-bottom: 42px;
-
-			h3 {
-				font-size: $text-normal;
-				letter-spacing: 0.5px;
-			}
+		&::placeholder {
+			padding-left: 12px;
+			font-size: $text-default;
 		}
 
-		.form {
-			width: 500px;
-			margin-bottom: 14px;
-
-			@mixin inputs {
-				width: 100%;
-				background-color: $bg;
-				border-radius: 10px;
-				border: 1px solid $gray;
-				color: $font-bright;
-				padding: 0 15px;
-				font-size: $text-Xsmall;
-				letter-spacing: 1.5px;
-
-				&::placeholder {
-					padding-left: 16px;
-					font-size: $text-default;
-				}
-
-				&:focus {
-					border: 1px solid $bg-lighter;
-				}
-
-				&:disabled {
-					opacity: 0.2;
-					transition: 0.3s ease-in-out;
-				}
-			}
-
-			.formFields {
-				@include flex;
-
-				flex-direction: column;
-				gap: 10px;
-				margin-bottom: 28px;
-				letter-spacing: 1.5px;
-				height: 97px;
-
-				label {
-					font-weight: 200;
-					font-size: $text-default;
-				}
-
-				input {
-					@include inputs;
-
-					height: 42px;
-				}
-
-				.errorMessage {
-					padding-left: 10px;
-					color: $error-message;
-					margin-top: -5px;
-					font-size: $text-default;
-				}
-			}
-
-			.messageField {
-				height: 165px;
-
-				textarea {
-					@include inputs;
-
-					height: 100px;
-					resize: none;
-					font-family: 'Open Sans', sans-serif;
-					padding-top: 8px;
-					overflow-wrap: break-word;
-					overflow-y: scroll;
-
-					&::-webkit-scrollbar {
-						display: none;
-					}
-				}
-			}
+		&:focus {
+			border: 1px solid $bg-lighter;
 		}
 
-		.formButton {
-			@include buttonPattern;
-			@include flex;
-			@include flexCenter;
+		&:disabled {
+			opacity: 0.2;
+			transition: 0.3s ease-in-out;
+		}
+	}
 
-			gap: 5px;
+	.formFields {
+		@include flex;
 
-			&:enabled {
-				cursor: pointer;
-			}
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 28px;
+		letter-spacing: 1.5px;
+		min-height: 97px;
 
-			&:disabled {
-				background-color: $darker-gray;
-			}
+		label {
+			font-weight: 200;
+			font-size: $text-default;
+		}
 
-			&[data-sent='true'] {
-				box-shadow: 0px 0px 12px 2px $accept-green;
-				transition: 0.3s ease-in-out;
-			}
+		input {
+			@include inputs;
 
-			&[data-sent='false'] {
-				box-shadow: 0px 0px 12px 2px $error-message;
-				transition: 0.3s ease-in-out;
+			height: 42px;
+		}
+
+		.errorMessage {
+			padding-left: 10px;
+			color: $error-message;
+			margin-top: -5px;
+			font-size: $text-default;
+		}
+	}
+
+	.messageField {
+		height: 165px;
+
+		textarea {
+			@include inputs;
+
+			min-height: 100px;
+			resize: none;
+			font-family: 'Open Sans', sans-serif;
+			padding-top: 8px;
+			overflow-wrap: break-word;
+			overflow-y: scroll;
+			scrollbar-width: none;
+
+			&::-webkit-scrollbar {
+				display: none;
 			}
 		}
+	}
+}
+
+.formButton {
+	@include buttonPattern;
+	@include flex;
+	@include flexCenter;
+
+	gap: 5px;
+	background-color: $button-primary;
+	padding: 8px 42px;
+	font-size: $text-Xsmall;
+	letter-spacing: 0.5px;
+
+	&:enabled {
+		cursor: pointer;
+	}
+
+	&:disabled {
+		background-color: $darker-gray;
+	}
+
+	&[data-sent='true'] {
+		box-shadow: 0px 0px 12px 2px $accept-green;
+		transition: 0.3s ease-in-out;
+	}
+
+	&[data-sent='false'] {
+		box-shadow: 0px 0px 12px 2px $error-message;
+		transition: 0.3s ease-in-out;
+	}
+}
+
+@media (max-width: $screen-modbile) {
+	.getInTouch {
+		text-align: center;
+	}
+
+	.contactContent {
+		padding: 40px 50px;
+	}
+
+	.formButton {
+		margin: 0 auto;
 	}
 }

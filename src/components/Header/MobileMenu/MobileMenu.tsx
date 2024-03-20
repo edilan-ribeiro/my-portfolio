@@ -31,6 +31,9 @@ export const MobileMenu = () => {
 					>
 						<nav>
 							<ul>
+								<li key='home'>
+									<a href='#hero'>Início</a>
+								</li>
 								{menu.map((menuItem) => (
 									<li key={menuItem.name}>
 										<a href={`#${menuItem.link}`}>

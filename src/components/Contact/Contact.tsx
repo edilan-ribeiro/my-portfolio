@@ -49,10 +49,10 @@ export const Contact = () => {
 	}
 
 	return (
-		<section id='contact'>
+		<section id='contact' className={contactStyles.contact}>
 			<div className={contactStyles.contentContainer}>
 				<SectionTitle sectionTitle='Contato' />
-				<div className={contactStyles.contact}>
+				<div>
 					<div className={contactStyles.contactContent}>
 						<div className={contactStyles.getInTouch}>
 							<h3>Vamos trabalhar juntos!</h3>
@@ -75,6 +75,7 @@ export const Contact = () => {
 										formSent === false
 									}
 									maxLength={40}
+									size={55}
 									{...register('name')}
 								/>
 								{errors.name && (
@@ -95,6 +96,7 @@ export const Contact = () => {
 										formSent === false
 									}
 									maxLength={130}
+									size={55}
 									{...register('email')}
 								/>
 								{errors.email && (
@@ -149,7 +151,7 @@ export const Contact = () => {
 							) : formSent ? (
 								'Enviado com sucesso! ✅'
 							) : formSent === false ? (
-								'Falha no enviar, recarregue a página! ❌'
+								'Falha no enviar, recarregue a página (F5)! ❌'
 							) : (
 								'Enviar'
 							)}
