@@ -1,23 +1,24 @@
 @use '@/styles/partials' as *;
 
 .about {
-	padding: 30px;
-	
 	@include sectionsMargin;
+
+	padding: 30px;
 }
 
 .infoWrap {
-	padding: 30px 0;
 	@include flex;
 	@include flexCenter;
 
+	gap: 20px;
+
 	.selfieSide {
 		max-width: 550px;
+		padding: 10px;
 
 		.selfie {
 			max-width: 430px;
 			height: auto;
-			margin-right: 30px;
 			border-radius: 25px;
 			position: relative;
 			display: flex;
@@ -26,7 +27,6 @@
 	}
 
 	.textSide {
-		flex-wrap: wrap;
 		max-width: 60%;
 		font-size: $text-small;
 		letter-spacing: 1px;
@@ -41,5 +41,39 @@
 			font-weight: 300;
 			margin-bottom: 30px;
 		}
+	}
+}
+
+.resumeFileBtn {
+	a {
+		@include buttonPattern;
+
+		background-color: $link-dark;
+		border: 1px solid $gray;
+		font-size: $text-small;
+		padding: 12px 42px;
+		display: inline-block;
+		font-weight: 600;
+		letter-spacing: 0.8px;
+
+		&:hover {
+			background-color: $bg-lighter;
+		}
+	}
+}
+
+@media (max-width: $screen-desktop) {
+	.infoWrap {
+		flex-direction: column;
+
+		.textSide {
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+
+	.resumeFileBtn {
+		@include flex;
+		@include flexCenter;
 	}
 }

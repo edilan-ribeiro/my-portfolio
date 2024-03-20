@@ -7,18 +7,17 @@ $text-Xsmall: 1.6rem;
 $text-default: 1.4rem;
 
 //colors
-$primary: #65c4e7;
-$brighter: #599bb3;
 $bg: #232323;
 $bg-darker: #1717177f;
 $bg-lighter: #2d5177;
+$font-bright: #ececec;
 $gray: #404050;
 $white: #ffffff;
 $button-primary: #006bdd;
 $darker-gray: #2f2f3e;
 $accept-green: #215f0d;
 $error-message: #bf3850;
-$font-bright: #ececec;
+$link-dark: #151515;
 
 //header-fixed-menu
 $nav-border: rgba(0, 0, 0, 0.12);
@@ -27,5 +26,4 @@ $nav-bg: rgb(70, 70, 70);
 
 //screen breakpoints
 $screen-desktop: 1024px;
-$screen-tablet: 755px;
-$screen-phone: 560px;
+$screen-modbile: 755px;

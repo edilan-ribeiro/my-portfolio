@@ -34,6 +34,7 @@
 	@include flexCenter;
 	flex-direction: column;
 	gap: 15px;
+	text-align: center;
 
 	h1 {
 		font-size: $text-big;
@@ -46,10 +47,6 @@
 		font-size: $text-medium;
 		font-weight: 300;
 		color: $white;
-	}
-
-	@media (max-width: $screen-phone) {
-		text-align: center;
 	}
 }
 

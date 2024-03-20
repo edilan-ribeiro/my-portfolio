@@ -30,7 +30,7 @@ export const About = () => {
 						<h3>
 							Olá,
 							<br />
-							Meu nome é Edilan, sou desenvolvedor fullstack!
+							Meu nome é Edilan, sou desenvolvedor full stack!
 						</h3>
 						<p>
 							Apaixonado por tecnologia desde cedo me formei em Redes de
@@ -53,12 +53,11 @@ export const About = () => {
 							travesseiro para o gato 🐈
 						</p>
 
-						{/* TODO: BUTTON COMPONENT 
-					<button>
-						<a href='000' />
-						meu currículo
-					</button>
-					TODO: BUTTON COMPONENT */}
+						<div className={aboutStyles.resumeFileBtn}>
+							<a href='https://github.com/edilan-ribeiro/' target='_blank'>
+								Ver Currículo
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

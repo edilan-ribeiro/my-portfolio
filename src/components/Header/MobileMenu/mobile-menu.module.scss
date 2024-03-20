@@ -40,8 +40,10 @@
 			}
 		}
 	}
+}
 
-	@media (max-width: 600px) {
+@media (max-width: $screen-modbile) {
+	.mobileNav {
 		width: 70%;
 	}
 }
