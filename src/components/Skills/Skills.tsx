@@ -5,6 +5,19 @@ import { FaCss3Alt, FaGitAlt, FaHtml5, FaNodeJs, FaReact, FaSass } from 'react-i
 import { RiJavascriptFill } from 'react-icons/ri'
 import { SiExpress, SiNextdotjs, SiTailwindcss } from 'react-icons/si'
 import { BiLogoTypescript, BiLogoPostgresql } from 'react-icons/bi'
+import { AnimatedDiv } from '../AnimatedDiv/AnimateDiv'
+
+const skillVariants = {
+	initial: {
+		opacity: 0,
+	},
+	whileInView: {
+		opacity: 1,
+		transition: {
+			duration: 1.5,
+		},
+	},
+}
 
 export const Skills = () => {
 	interface icon {
@@ -33,7 +46,14 @@ export const Skills = () => {
 
 				<div className={skillsStyles.skillsContainer}>
 					{skillData.map((skill) => (
-						<div key={skill.name} className={skillsStyles.skillCard}>
+						<AnimatedDiv
+							key={skill.name}
+							className={skillsStyles.skillCard}
+							initial='initial'
+							whileInView='whileInView'
+							variants={skillVariants}
+							viewport={{ once: true, margin: '-200px 0px 0px 0px' }}
+						>
 							<div className={skillsStyles[skill.color]}>
 								<div className={skillsStyles.iconContainer}>
 									{icons[skill.name]}
@@ -41,9 +61,8 @@ export const Skills = () => {
 
 								<h3>{skill.name}</h3>
 							</div>
-
 							<p>{skill.description}</p>
-						</div>
+						</AnimatedDiv>
 					))}
 				</div>
 			</div>
