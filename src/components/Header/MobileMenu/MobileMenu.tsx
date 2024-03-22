@@ -6,7 +6,7 @@ import mobileStyle from './mobile-menu.module.scss'
 import { AnimatePresence, motion } from 'framer-motion'
 import menu from '@/data/menu.json'
 
-const variants = {
+const mobileMenuVariants = {
 	open: { opacity: 1, x: 0 },
 	closed: { opacity: 0, x: '50%' },
 }
@@ -27,7 +27,7 @@ export const MobileMenu = () => {
 						initial={{ opacity: 0, x: '50%' }}
 						exit={{ opacity: 0, x: '50%' }}
 						animate={isOpen ? 'open' : 'closed'}
-						variants={variants}
+						variants={mobileMenuVariants}
 					>
 						<nav>
 							<ul>

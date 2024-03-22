@@ -4,6 +4,17 @@ import { useEffect, useState } from 'react'
 import menuStyle from './desktop-menu.module.scss'
 import menu from '@/data/menu.json'
 import { FaHome } from 'react-icons/fa'
+import { AnimatePresence, motion } from 'framer-motion'
+
+const desktopMenuVariants = {
+	initial: {
+		opacity: 0,
+	},
+	transition: {
+		opacity: 1,
+		duration: 0.3,
+	},
+}
 
 export const DesktopMenu = () => {
 	const [afterHero, setAfterHero] = useState(false)
@@ -25,23 +36,31 @@ export const DesktopMenu = () => {
 	}, [])
 
 	return (
-		<header className={menuStyle.header} data-scrolled={afterHero}>
-			<nav className={menuStyle.contentContainer}>
-				<ul className={menuStyle.desktopMenu} data-scrolled={afterHero}>
-					{afterHero && (
-						<li key='home'>
-							<a href='#hero'>
-								<FaHome />
-							</a>
-						</li>
-					)}
-					{menu.map((menuItem) => (
-						<li key={menuItem.name}>
-							<a href={`#${menuItem.link}`}>{menuItem.name}</a>
-						</li>
-					))}
-				</ul>
-			</nav>
-		</header>
+		<AnimatePresence>
+			<motion.header
+				className={menuStyle.header}
+				data-scrolled={afterHero}
+				initial='initial'
+				animate='transition'
+				variants={desktopMenuVariants}
+			>
+				<nav className={menuStyle.contentContainer}>
+					<ul className={menuStyle.desktopMenu} data-scrolled={afterHero}>
+						{afterHero && (
+							<li key='home'>
+								<a href='#hero'>
+									<FaHome />
+								</a>
+							</li>
+						)}
+						{menu.map((menuItem) => (
+							<li key={menuItem.name}>
+								<a href={`#${menuItem.link}`}>{menuItem.name}</a>
+							</li>
+						))}
+					</ul>
+				</nav>
+			</motion.header>
+		</AnimatePresence>
 	)
 }
