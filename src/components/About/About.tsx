@@ -44,7 +44,7 @@ export const About = () => {
 						initial='initial'
 						whileInView='whileInView'
 						variants={selfieVariants}
-						viewport={{ once: true, margin: '-150px 0px 0px 0px' }}
+						viewport={{ once: true, amount: 0.3 }}
 					>
 						<div className={aboutStyles.selfie}>
 							<Image
