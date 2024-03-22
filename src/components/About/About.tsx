@@ -66,7 +66,7 @@ export const About = () => {
 						initial='initial'
 						whileInView='whileInView'
 						variants={textVariants}
-						viewport={{ once: true, margin: '-150px 0px 0px 0px' }}
+						viewport={{ once: true, amount: 0.3 }}
 					>
 						<h3>
 							Olá,
