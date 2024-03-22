@@ -95,7 +95,7 @@ export const About = () => {
 						</p>
 
 						<div className={aboutStyles.resumeFileBtn}>
-							<a href='https://github.com/edilan-ribeiro/' target='_blank'>
+							<a href='https://drive.google.com/file/d/15n0KdqaXRe0CYwBKFuyXsxgFqCWJDskm/view?usp=drive_link' target='_blank'>
 								Ver Currículo
 							</a>
 						</div>
