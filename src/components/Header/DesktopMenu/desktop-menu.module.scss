@@ -25,6 +25,7 @@
 			backdrop-filter: blur(9.5px);
 			-webkit-backdrop-filter: blur(9.5px);
 			border: 1px solid rgb(70, 70, 70);
+			transition: all 0.2s ease-in-out;
 		}
 
 		li {
@@ -39,6 +40,29 @@
 				letter-spacing: 1px;
 				padding: 10px;
 				font-weight: 500;
+
+				// HOVER ANIMATION //
+				position: relative;
+
+				&:before {
+					display: block;
+					content: '';
+					width: 0;
+					height: 2px;
+					bottom: 5px;
+					left: 0;
+					z-index: 0;
+					position: absolute;
+					background: $white;
+					transition: all 0.3s ease-in-out;
+				}
+
+				&:hover {
+					background-position: 0%;
+					&:before {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
