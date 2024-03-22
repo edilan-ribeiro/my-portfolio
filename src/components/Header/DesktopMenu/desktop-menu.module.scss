@@ -19,12 +19,12 @@
 		justify-content: space-between;
 
 		&[data-scrolled='true'] {
-			background: rgba(0, 0, 0, 0.12);
+			background: $nav-bg;
 			border-radius: 16px;
-			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 4px 30px $nav-shadow;
 			backdrop-filter: blur(9.5px);
 			-webkit-backdrop-filter: blur(9.5px);
-			border: 1px solid rgb(70, 70, 70);
+			border: 1px solid $nav-border;
 			transition: all 0.2s ease-in-out;
 		}
 
