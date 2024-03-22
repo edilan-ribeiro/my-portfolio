@@ -105,11 +105,7 @@ Após clonar, baixar ou fazer um fork, utilize o comando abaixo para instalar as
 npm install
 ```
 
-Rode os testes com:
-
-```shell
-npx run test
-```
+Testes estão sendo implementados no momento
 
 Esse projeto te permite:
 

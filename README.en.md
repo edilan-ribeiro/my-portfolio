@@ -110,10 +110,8 @@ After cloning, downloading, or forking, use the command below to install the pro
 ```shell
 npm install
 ```
-Run tests with: 
-```shell
-npx run test
-```
+
+Tests are in development right now
 
 This project allows you to:
 
