@@ -22,7 +22,7 @@
         Essa página foi criada para mostrar um pouco das minhas habilidades e projetos
   </p>
   
-  <a href="https://my-portfolio-rho-neon.vercel.app/">Ver online</a>
+  <a href="https://edilan-portfolio-rho-neon.vercel.app/">Ver online</a>
 </div>
 
 <br>
@@ -95,7 +95,6 @@ Diversas coisas foram adicionadas na nova versão deste projeto, que esta em con
 
 🤹 Framer Motion: A utilização das animações através desta biblioteca não só torna o portfolio visualmente atraente, mas também melhora a experiência do usuário, tornando a navegação mais fluida e envolvente.
 
-
  <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 ## Utilização
@@ -106,7 +105,8 @@ Após clonar, baixar ou fazer um fork, utilize o comando abaixo para instalar as
 npm install
 ```
 
-Rode os testes com: 
+Rode os testes com:
+
 ```shell
 npx run test
 ```

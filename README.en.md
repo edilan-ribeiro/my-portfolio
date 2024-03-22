@@ -23,7 +23,7 @@
    This page was created to showcase some of my skills and projects.
   </p>
   
-  <a href="https://my-portfolio-rho-neon.vercel.app/">View Demo</a>
+  <a href="https://edilan-portfolio-rho-neon.vercel.app/">View Demo</a>
 </div>
 
 <br>
