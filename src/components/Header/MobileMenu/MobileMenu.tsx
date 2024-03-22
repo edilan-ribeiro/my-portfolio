@@ -17,7 +17,7 @@ export const MobileMenu = () => {
 	return (
 		<>
 			<button className={mobileStyle.hamburguer}>
-				<Hamburger toggled={isOpen} toggle={setOpen} size={32} rounded />
+				<Hamburger toggled={isOpen} toggle={setOpen} size={32} rounded label={`menu mobile ${isOpen ? 'aberto' : 'fechado'}`}/>
 			</button>
 
 			<AnimatePresence>
