@@ -57,6 +57,7 @@
 	animation: blink 1s infinite ease-in-out;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 5;
 
 	@keyframes blink {
 		0% {

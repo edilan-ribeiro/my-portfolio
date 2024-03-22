@@ -25,7 +25,11 @@ export const SectionTitle = ({ sectionTitle }: SectionTitleProps) => {
 			initial='initial'
 			whileInView='whileInView'
 			variants={sectionTitleVariants}
-			viewport={{ once: true, amount: 0.3 }}
+			viewport={
+				sectionTitle === 'Sobre mim'
+					? { once: true, amount: 0.5 }
+					: { once: true, amount: 'some' }
+			}
 			className={sectionTitleStyles.sectionTitle}
 		>
 			<h2>{sectionTitle}</h2>
