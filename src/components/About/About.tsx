@@ -2,6 +2,35 @@ import Image from 'next/image'
 import selfie from '@/assets/about/selfie-about.png'
 import aboutStyles from './about.module.scss'
 import { SectionTitle } from '../SectionTitle/SectionTitle'
+import { AnimatedDiv } from '../AnimatedDiv/AnimateDiv'
+
+const selfieVariants = {
+	initial: {
+		opacity: 0,
+		x: '-150px',
+	},
+	whileInView: {
+		opacity: 1,
+		x: '0',
+		transition: {
+			duration: 0.5,
+		},
+	},
+}
+
+const textVariants = {
+	initial: {
+		opacity: 0,
+		x: '150px',
+	},
+	whileInView: {
+		opacity: 1,
+		x: '0',
+		transition: {
+			duration: 0.5,
+		},
+	},
+}
 
 export const About = () => {
 	return (
@@ -10,7 +39,13 @@ export const About = () => {
 				<SectionTitle sectionTitle='Sobre mim' />
 
 				<div className={aboutStyles.infoWrap}>
-					<div className={aboutStyles.selfieSide}>
+					<AnimatedDiv
+						className={aboutStyles.selfieSide}
+						initial='initial'
+						whileInView='whileInView'
+						variants={selfieVariants}
+						viewport={{ once: true, margin: '-150px 0px 0px 0px' }}
+					>
 						<div className={aboutStyles.selfie}>
 							<Image
 								src={selfie}
@@ -24,9 +59,15 @@ export const About = () => {
 								}}
 							/>
 						</div>
-					</div>
+					</AnimatedDiv>
 
-					<div className={aboutStyles.textSide}>
+					<AnimatedDiv
+						className={aboutStyles.textSide}
+						initial='initial'
+						whileInView='whileInView'
+						variants={textVariants}
+						viewport={{ once: true, margin: '-150px 0px 0px 0px' }}
+					>
 						<h3>
 							Olá,
 							<br />
@@ -58,7 +99,7 @@ export const About = () => {
 								Ver Currículo
 							</a>
 						</div>
-					</div>
+					</AnimatedDiv>
 				</div>
 			</div>
 		</section>
