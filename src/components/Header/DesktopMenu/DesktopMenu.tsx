@@ -48,7 +48,7 @@ export const DesktopMenu = () => {
 					<ul className={menuStyle.desktopMenu} data-scrolled={afterHero}>
 						{afterHero && (
 							<li key='home'>
-								<a href='#hero'>
+								<a href='#hero' data-testid='home-icon'>
 									<FaHome />
 								</a>
 							</li>

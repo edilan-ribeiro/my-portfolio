@@ -28,6 +28,7 @@ export const MobileMenu = () => {
 						exit={{ opacity: 0, x: '50%' }}
 						animate={isOpen ? 'open' : 'closed'}
 						variants={mobileMenuVariants}
+						data-testid='mobile-nav'
 					>
 						<nav>
 							<ul>
