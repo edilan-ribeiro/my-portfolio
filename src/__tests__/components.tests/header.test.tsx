@@ -1,63 +1,67 @@
 import { expect, test, describe } from 'vitest'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import '@testing-library/jest-dom/vitest'
 import { Header } from '@/components/Header/Header'
 import userEvent from '@testing-library/user-event'
 
-describe('Ensure the header is working properly on desktop and mobile', () => {
-	test('Checks if the desktop header is being called and working as intended', () => {
-		render(<Header />)
-
-		const links = screen.queryAllByRole('link')
-		const expectedHrefs = ['#about', '#skills', '#projects', '#contact']
-
-		links.forEach((link) => {
-			expect(expectedHrefs).toContain(link.getAttribute('href'))
-		})
-
-		const conditionalHomeIcon = screen.queryByTestId('home-icon')
-
-		expect(conditionalHomeIcon).not.toBeInTheDocument()
-
-		const header = screen.getByRole('banner')
-		fireEvent.scroll(window, { target: { scrollY: 1000 } })
-
-		setTimeout(() => {
-			expect(header).toHaveAttribute('data-scrolled', 'true')
-			expect(conditionalHomeIcon).toBeInTheDocument()
-		}, 200)
-	})
-
-	test('Checks if the mobile header is being called and working as intended on a mobile window', async () => {
+describe('Ensure the header is conditionally rendering correctly based on desktop and mobile', () => {
+	const setupScreenSize = (width: number) => {
 		Object.defineProperty(window, 'innerWidth', {
 			writable: true,
 			configurable: true,
-			value: 899,
+			value: width,
 		})
 
 		window.dispatchEvent(new Event('resize'))
+	}
 
+	test('Checks if the desktop header content is shown and is working as intended', async () => {
+		setupScreenSize(1024)
+		render(<Header />)
+		const expectedDesktopHrefs = ['#about', '#skills', '#projects', '#contact']
+
+		const menuLinks = await screen.findAllByRole('link')
+		menuLinks.forEach((link, index) => {
+			expect(link.getAttribute('href')).toContain(expectedDesktopHrefs[index])
+		})
+
+		const conditionalHomeIcon = screen.queryByTestId('home-icon')
+		expect(conditionalHomeIcon).not.toBeInTheDocument()
+
+		const header = await screen.getByRole('banner')
+
+		fireEvent.scroll(window, { target: { scrollY: 1000 } })
+
+		await waitFor(() => {
+			expect(header).toHaveAttribute('data-scrolled', 'true')
+		})
+
+		const homeIcon = await screen.findByTestId('home-icon')
+		expect(homeIcon).toBeVisible()
+		expect(homeIcon.getAttribute('href')).toContain('#hero')
+	})
+
+	test('Checks if the mobile header content is shown and is working (open/close) as intended', async () => {
+		setupScreenSize(700)
 		const user = userEvent.setup()
 		render(<Header />)
 
-		const hamburguerMenuButton = screen.getByRole('button', { name: /menu mobile fechado/i })
-		await user.click(hamburguerMenuButton)
+		const hamburguerMenu = screen.getByRole('button', { name: /menu mobile fechado/i })
 
-		expect(hamburguerMenuButton).toHaveAccessibleName(/menu mobile aberto/i)
+		await user.click(hamburguerMenu)
+		expect(hamburguerMenu).toHaveAccessibleName(/menu mobile aberto/i)
 
-		const mobileMenu = screen.getByTestId('mobile-nav')
+		const mobileNavMenu = screen.getByTestId('mobile-nav')
+		expect(mobileNavMenu).toBeVisible()
 
-		expect(mobileMenu).toBeVisible()
-
-		const links = screen.queryAllByRole('link')
-		const expectedHrefs = ['#hero', '#about', '#skills', '#projects', '#contact']
-
-		links.forEach((link) => {
-			expect(expectedHrefs).toContain(link.getAttribute('href'))
+		const expectedMobileHrefs = ['#hero', '#about', '#skills', '#projects', '#contact']
+		const menuLinks = await screen.findAllByRole('link')
+		menuLinks.forEach((link, index) => {
+			expect(link.getAttribute('href')).toContain(expectedMobileHrefs[index])
 		})
 
-		await user.click(hamburguerMenuButton)
-		expect(hamburguerMenuButton).toHaveAccessibleName(/menu mobile fechado/i)
-		expect(mobileMenu).not.toBeVisible()
+		await user.click(hamburguerMenu)
+		expect(hamburguerMenu).toHaveAccessibleName(/menu mobile fechado/i)
+		expect(mobileNavMenu).not.toBeVisible()
 	})
 })
