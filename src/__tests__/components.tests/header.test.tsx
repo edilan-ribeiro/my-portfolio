@@ -1,8 +1,6 @@
-import { expect, test, describe } from 'vitest'
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
-import '@testing-library/jest-dom/vitest'
-import { Header } from '@/components/Header/Header'
 import userEvent from '@testing-library/user-event'
+import { Header } from '@/components/Header/Header'
 
 describe('Ensure the header is conditionally rendering correctly based on desktop and mobile', () => {
 	const setupScreenSize = (width: number) => {
@@ -15,7 +13,7 @@ describe('Ensure the header is conditionally rendering correctly based on deskto
 		window.dispatchEvent(new Event('resize'))
 	}
 
-	test('Checks if the desktop header content is shown and is working as intended', async () => {
+	it('Checks if the desktop header content is shown and is working as intended', async () => {
 		setupScreenSize(1024)
 		render(<Header />)
 		const expectedDesktopHrefs = ['#about', '#skills', '#projects', '#contact']
@@ -28,7 +26,7 @@ describe('Ensure the header is conditionally rendering correctly based on deskto
 		const conditionalHomeIcon = screen.queryByTestId('home-icon')
 		expect(conditionalHomeIcon).not.toBeInTheDocument()
 
-		const header = await screen.getByRole('banner')
+		const header = screen.getByRole('banner')
 
 		fireEvent.scroll(window, { target: { scrollY: 1000 } })
 
@@ -41,7 +39,7 @@ describe('Ensure the header is conditionally rendering correctly based on deskto
 		expect(homeIcon.getAttribute('href')).toContain('#hero')
 	})
 
-	test('Checks if the mobile header content is shown and is working (open/close) as intended', async () => {
+	it('Checks if the mobile header content is shown and is working (open/close) as intended', async () => {
 		setupScreenSize(700)
 		const user = userEvent.setup()
 		render(<Header />)
