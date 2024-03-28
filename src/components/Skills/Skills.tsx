@@ -49,6 +49,7 @@ export const Skills = () => {
 						<AnimatedDiv
 							key={skill.name}
 							className={skillsStyles.skillCard}
+							data-testid='skill-card'
 							initial='initial'
 							whileInView='whileInView'
 							variants={skillVariants}
