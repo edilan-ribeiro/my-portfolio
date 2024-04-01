@@ -45,7 +45,7 @@ export const DesktopMenu = () => {
 				variants={desktopMenuVariants}
 			>
 				<nav className={menuStyle.contentContainer}>
-					<ul className={menuStyle.desktopMenu} data-scrolled={afterHero}>
+					<ul className={menuStyle.desktopMenu}>
 						{afterHero && (
 							<li key='home'>
 								<a href='#hero'>
