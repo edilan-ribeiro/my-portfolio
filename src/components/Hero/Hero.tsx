@@ -7,7 +7,7 @@ export const Hero = () => {
 	return (
 		<section className={heroStyles.hero} id='hero'>
 			<div className={heroStyles.heroBackground}>
-				<video autoPlay muted loop poster={fallbackImage.src}>
+				<video autoPlay muted loop poster={fallbackImage.src} data-testid='hero-video'>
 					<source
 						src='https://mylivewallpapers.com/wp-content/uploads/Fantasy/PREVIEW-Watching-the-Universe-Blue.mp4'
 						type='video/mp4'
