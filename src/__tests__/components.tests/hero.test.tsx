@@ -38,14 +38,14 @@ describe('Ensure the hero component has the correct content', () => {
 	it('Should have a video background with a fallback image', () => {
 		const videoBackground = screen.getByTestId('hero-video')
 		videoBackground.setAttribute('poster', `${fallbackImage}`)
-        
+
 		const videoSrc = videoBackground.querySelector('source')?.getAttribute('src')
 		const videoFallback = videoBackground.getAttribute('poster')
 
-		expect(videoSrc).toBe(
+		expect(videoSrc).toEqual(
 			'https://mylivewallpapers.com/wp-content/uploads/Fantasy/PREVIEW-Watching-the-Universe-Blue.mp4'
 		)
-		expect(videoFallback).toBe(`${fallbackImage}`)
+		expect(videoFallback).toEqual(`${fallbackImage}`)
 
 		expect(videoBackground).toBeVisible()
 	})
