@@ -11,22 +11,19 @@
 	&[data-scrolled='true'] {
 		position: fixed;
 		top: 0;
+		background: $nav-bg;
+		border-radius: 16px;
+		box-shadow: 0 4px 30px $nav-shadow;
+		backdrop-filter: blur(9.5px);
+		-webkit-backdrop-filter: blur(9.5px);
+		border: 1px solid $nav-border;
+		transition: 0.2s ease-in-out;
 	}
 
 	.desktopMenu {
 		@include flex;
 		padding: 0 30px;
 		justify-content: space-between;
-
-		&[data-scrolled='true'] {
-			background: $nav-bg;
-			border-radius: 16px;
-			box-shadow: 0 4px 30px $nav-shadow;
-			backdrop-filter: blur(9.5px);
-			-webkit-backdrop-filter: blur(9.5px);
-			border: 1px solid $nav-border;
-			transition: all 0.2s ease-in-out;
-		}
 
 		li {
 			@include flex;
