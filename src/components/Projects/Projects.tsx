@@ -39,6 +39,7 @@ export async function Projects() {
 							}}
 							variants={projectCardVariants}
 							viewport={{ once: true, margin: '-150px 0px 0px 0px' }}
+							title={`${project.name} card`}
 						>
 							<div className={projectsStyles.cardImage}>
 								<a href={project.html_url} target='_blank'>
