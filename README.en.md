@@ -111,10 +111,16 @@ After cloning, downloading, or forking, use the command below to install the pro
 npm install
 ```
 
-Tests are in development right now
+Use the command below to run the tests:
+
+```shell
+npm run test
+```
+
 
 This project allows you to:
 
+- Run tests on this branch
 - View a professional summary
 - Access my resume
 - Gain an overview of the technologies I use

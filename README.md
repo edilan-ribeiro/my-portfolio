@@ -105,10 +105,15 @@ Após clonar, baixar ou fazer um fork, utilize o comando abaixo para instalar as
 npm install
 ```
 
-Testes estão sendo implementados no momento
+Para rodar os testes deste branch utilize  o comando:
+
+```shell
+npm run test
+```
 
 Esse projeto te permite:
 
+- Rodar testes neste branch
 - Ver um resumo profissional
 - Acessar meu currículo
 - Uma visão ampla das tecnologias que utilizo
