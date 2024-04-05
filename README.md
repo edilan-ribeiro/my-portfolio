@@ -105,7 +105,7 @@ Após clonar, baixar ou fazer um fork, utilize o comando abaixo para instalar as
 npm install
 ```
 
-Testes estão sendo implementados no momento
+Testes estão localizados no branch "test"
 
 Esse projeto te permite:
 

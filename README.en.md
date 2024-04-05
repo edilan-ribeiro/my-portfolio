@@ -111,7 +111,7 @@ After cloning, downloading, or forking, use the command below to install the pro
 npm install
 ```
 
-Tests are in development right now
+Tests are located in the "test" branch
 
 This project allows you to:
 
