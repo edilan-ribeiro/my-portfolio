@@ -2,6 +2,9 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,6 +22,7 @@
     "react-icons": "^5.0.1",
     "react-spinners": "^0.13.8",
     "resend": "^3.2.0",
+    "sharp": "^0.35.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
