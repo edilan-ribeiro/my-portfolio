@@ -1,11 +1,17 @@
-export function techInformation(fileContent: string) {
-	const projectReadme = atob(fileContent)
+export function techInformation(fileContent?: string) {
+	if (!fileContent) {
+		return []
+	}
 
-	const searchTechRegex = /!\[(.*?)\]/g
+	try {
+		const projectReadme = atob(fileContent)
 
-	const matchingTechs = [...projectReadme.matchAll(searchTechRegex)]
+		const searchTechRegex = /!\[(.*?)\]/g
 
-	const techStack: string[] = matchingTechs.map((tech) => tech[1])
+		const matchingTechs = [...projectReadme.matchAll(searchTechRegex)]
 
-	return techStack
+		return matchingTechs.map((tech) => tech[1])
+	} catch {
+		return []
+	}
 }

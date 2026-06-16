@@ -1,3 +1,5 @@
+import { externalProjects } from '@/data/externalProjects'
+
 interface projectData {
 	name: string
 	description: string
@@ -6,10 +8,23 @@ interface projectData {
 	html_url: string
 	id: number
 	created_at: string
+	cover?: string
+	techs?: string[]
+	showCode?: boolean
 }
+
+const featuredProjects = [
+	'barber-system',
+	'space-tourism',
+	'hydra-project',
+	'pokemon-project',
+	'rh-consultoria',
+]
 
 export async function fetchProjectData(): Promise<projectData[]> {
 	let projectData: projectData[] = []
+
+	
 
 
 	try {
@@ -38,8 +53,17 @@ export async function fetchProjectData(): Promise<projectData[]> {
 
 		let reorderProjects = filteredProjectData.splice(2, 2)
 
+		filteredProjectData = featuredProjects
+	.map((projectName) =>
+		projectData.find((project) => project.name === projectName)
+	)
+	.filter((project): project is projectData => Boolean(project))
+
 		filteredProjectData = [...filteredProjectData, ...reorderProjects]
+
+		filteredProjectData = filteredProjectData.slice(0, 5)
 	}
 
-	return filteredProjectData
+	return [...externalProjects,...filteredProjectData]
+	
 }

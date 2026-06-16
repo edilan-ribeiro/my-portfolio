@@ -44,7 +44,10 @@ export async function Projects() {
 							<div className={projectsStyles.cardImage}>
 								<a href={project.html_url} target='_blank'>
 									<Image
-										src={`https://raw.githubusercontent.com/edilan-ribeiro/${project.name}/main/public/cover.png`}
+										src={
+											project.cover ??
+											`https://raw.githubusercontent.com/edilan-ribeiro/${project.name}/main/public/cover.png`
+										}
 										alt={formatName(project.name)}
 										fill
 										style={{
@@ -60,13 +63,15 @@ export async function Projects() {
 									<h3>{formatName(project.name)}</h3>
 									<p>{project.description}</p>
 
-									<TechStack projects={project.name} />
+									<TechStack projects={project.name}techs={project.techs} />
 								</div>
 
 								<div className={projectsStyles.cardLinks}>
-									<a href={project.html_url} target='_blank'>
-										<FaGithub /> <p>ver código</p>
-									</a>
+									{project.showCode !== false && (
+										<a href={project.html_url} target='_blank'>
+											<FaGithub /> <p>ver código</p>
+										</a>
+									)}
 
 									{project.homepage.length !== 0 && (
 										<a
