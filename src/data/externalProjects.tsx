@@ -24,4 +24,16 @@ export const externalProjects: ExternalProject[] = [
         techs: ['WordPress', 'PHP', 'MySQL'],
         showCode: false,
     },
+    {
+        id: 10003,
+        name: 'INAS',
+        description: 'Site feito para a OSC Instituto de Ações Socioculturais.',
+        topics: ['portfolio-project'],
+        homepage: 'https://institutoinas.org.br/',
+        html_url: 'https://institutoinas.org.br/',
+        created_at: '2026-09-01',
+        cover: '/ExternalProjects/instituto_inas.png',
+        techs: ['WordPress', 'PHP', 'MySQL'],
+        showCode: false,
+    },
 ]

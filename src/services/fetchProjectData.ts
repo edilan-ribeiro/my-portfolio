@@ -15,7 +15,6 @@ interface projectData {
 
 const featuredProjects = [
 	'barber-system',
-	'space-tourism',
 	'hydra-project',
 	'pokemon-project',
 	'rh-consultoria',
