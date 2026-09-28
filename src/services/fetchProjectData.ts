@@ -60,7 +60,7 @@ export async function fetchProjectData(): Promise<projectData[]> {
 
 		filteredProjectData = [...filteredProjectData, ...reorderProjects]
 
-		filteredProjectData = filteredProjectData.slice(0, 5)
+		filteredProjectData = filteredProjectData.slice(0, 4)
 	}
 
 	return [...externalProjects,...filteredProjectData]
